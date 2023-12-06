@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:ital,wght@0,400;0,500;0,700;1,400;1,700|PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+    font-family: 'Tormenta20x';
+    src: local('Tormenta20x'),local('Tormenta20x-Regular'), url('https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/master/Tormenta20%20-%20Jogo%20do%20Ano/Fonts/Tormenta20x.ttf');
+}
+
+.sheet-main {
+    margin: 0 auto;
+    font-family: 'Tormenta20x', 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: #424F66;
+    display: grid;
+    width: 860px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    column-gap: 22px;
+    /*background-color: #f7f5f6*/
+}
+
+.sheet-main input,
+.sheet-main textarea,
+.sheet-main select {
+    outline: none !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border-radius: 0 !important;
+    /*border:none;*/
+    border: 1px solid #424F66;
+    background: transparent;
+}
+
+.sheet-header-global {
+    border: 3px solid #424F66;
+    margin: 50px 10px 10px 10px;
+}
+
+.sheet-header-left{
+    float:left;
+    width: 45%;
+    padding: 10px;
+    background-image: url("imgs/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -50px;
+    margin-left: -50px;
+    padding-right: 25px;
+}
+.sheet-header-right{
+    float:left;
+    width: 55%
+}
+
+.sheet-header-logo{
+    width: 0px;
+    height: 0px;
+    margin-top: -50px;
+    margin-left: -20px;
+}
+
+.sheet-header-name{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
+}
+
+.sheet-header-name-input{
+    display: inline-block;
+    text-align: center;
+    float: right;
+    margin-top: 28px;
+    width: 167px;
+    font-size: 20px !important;
+}
+.sheet-header-pronoums{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 27px;
+    margin-left: 20px;
+}
+.sheet-header-pronoums-input{
+    display: inline-block;
+    width: 100px;
+    border-bottom: 3px solid #424F66 !important;
+}
+.sheet-header-line-inputs{
+    margin-top: 10px;
+    border-bottom: 3px solid #424F66;
+}
+.sheet-header-right-input{
+    width: 30%;
+    margin-right: 3.2%;
+}
+.sheet-header-right-last-input{
+    width: 30%;
+}
+.sheet-header-line-label{
+    width: 100%;
+}
+.sheet-header-line-label span{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 3.2%;
+}
+.sheet-header-line-last-label{
+    margin-right: 0px !important;
+}
+.sheet-main-column{
+    float:left;
+    width: 65%;
+}
+.sheet-attributes{
+    height: 150px;
+    /*padding: 10px;*/
+    background-image: url("imgs/atributos.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: -10px;
+    /*margin-top: -50px;
+    margin-left: -50px;
+    padding-right: 25px;*/  
+}
+.sheet-attribute-name{
+    width: 92.7%;
+    padding-top: 15px;
+    margin-left: 4.2%
+}
+.sheet-attribute-name span{
+    width: 14%;
+    margin-right: 3.2%;
+    display: inline-block;
+    text-align: center;
+}
+.sheet-attribute-name-last{
+    margin-right: 0px !important;
+}
