@@ -31,10 +31,24 @@
             </div>
         </div>
     </div>
-    <div class="sheet-main-column">
+    <div class="sheet-navigation-tabs">
+        <label class="sheet-switch sheet-character-attributes-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="0" checked>
+            <span class="slider round">Atributos</span>
+        </label>
+        <label class="sheet-switch sheet-character-actions-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="1">
+            <span class="slider round">Ações</span>
+        </label>
+        <label class="sheet-switch sheet-character-spells-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="2">
+            <span class="slider round">Magias</span>
+        </label>
+    </div>
+    <div class="sheet-main-column sheet-character-attributes">
         <div class="sheet-attributes">
             <div class="sheet-attribute-name">
-                <span>FOR</span><span>CON</span><span>CON</span><span>INT</span><span>SAB</span><span class="sheet-attribute-name-last">CAR</span>
+                <span>FOR</span><span>DES</span><span>CON</span><span>INT</span><span>SAB</span><span class="sheet-attribute-name-last">CAR</span>
             </div>
             <div class="sheet-attribute-value">
                 <input class="sheet-attribute-input" name="attr_character_strength" type="text" spellcheck="false" placeholder=""  value="" type="number">
@@ -69,4 +83,50 @@
         <div class="sheet-main-column-right-collumn">
         </div> 
     </div>
+    <div class="sheet-main-column sheet-character-actions">
+
+    </div>
+    <div class="sheet-main-column sheet-character-spells">
+
+    </div>
 </div>
+
+<script type="text/worker">
+    //Troca entre as abas
+    on("sheet:opened change:cstype", function(e){
+        getAttrs(["cstype"], function(v){
+            let switch_selector = 'sheet-switch-selected';
+            
+            if (v.cstype == 0) {
+                $20('.sheet-character-attributes-tab').addClass(switch_selector);
+                $20('.sheet-character-actions-tab').removeClass(switch_selector);
+                $20('.sheet-character-spells-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-attributes').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-actions').addClass('sheet-hiddenelement');
+                $20('.sheet-character-spells').addClass('sheet-hiddenelement');            
+            }
+    
+            if (v.cstype == 1){
+                $20('.sheet-character-actions-tab').addClass(switch_selector);
+                $20('.sheet-character-attributes-tab').removeClass(switch_selector);
+                $20('.sheet-character-spells-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-actions').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-attributes').addClass('sheet-hiddenelement');
+                $20('.sheet-character-spells').addClass('sheet-hiddenelement');             
+            }               
+    
+            if (v.cstype == 2){
+                $20('.sheet-character-spells-tab').addClass(switch_selector);
+                $20('.sheet-character-actions-tab').removeClass(switch_selector);
+                $20('.sheet-character-attributes-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-spells').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-actions').addClass('sheet-hiddenelement');
+                $20('.sheet-character-attributes').addClass('sheet-hiddenelement');             
+            }    
+                            
+        });
+    });
+</script>

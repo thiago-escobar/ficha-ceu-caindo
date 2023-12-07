@@ -199,3 +199,122 @@
     background-size: 100%;
     margin-left: -10px;
 }
+
+/* Navigation */
+.sheet-hiddenelement {
+    display:none !important;
+}
+
+.sheet-main .sheet-navigation-tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sheet-main .sheet-navigation-tabs label {
+    position: relative;
+    background: #ddd;
+    background-image: linear-gradient(to bottom, #fff, #ddd);
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    border-radius: 5px 0 0 0;
+    box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+
+.sheet-main .sheet-navigation-tabs label:hover,
+.sheet-main .sheet-navigation-tabs label:hover::after,
+.sheet-main .sheet-navigation-tabs label:focus,
+.sheet-main .sheet-navigation-tabs label:focus::after {
+  background: #fff;
+}
+
+.sheet-main .sheet-navigation-tabs label:focus {
+  outline: 0;
+}
+
+.sheet-main .sheet-navigation-tabs label::after {
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;
+}
+
+.sheet-main .sheet-navigation-tabs label,
+.sheet-main .sheet-navigation-tabs label::after {
+  background: #fff;
+  z-index: 3;
+}
+
+.sheet-switch-selected::after {
+    background: #da0f20 !important;
+    z-index: 3;
+}
+
+
+.sheet-main .sheet-navigation-tabs > input{
+    width: 50px;
+    height: 12px;
+    font-size: 7px;
+    line-height: 12px;
+    text-align: center;
+    color: #969696;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none
+}
+
+/* The switch - the box around the slider */
+.sheet-switch {
+    position: relative;
+    display: inline-block; 
+    height: 20px !important;
+    margin-bottom: 0px !important;
+    width: 120px !important;
+    text-align: center;
+  }
+  
+  /* Hide default HTML checkbox */
+  .sheet-switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+ /* The slider */
+ .sheet-slider {
+    cursor: pointer;
+    height: 20px !important;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .sheet-switch-selected {
+    background-color: #DA0F20 !important;
+    color: white !important;
+  }
+
+  
+  input:focus + .sheet-slider {
+    box-shadow: 0 0 1px #DA0F20;
+    color: white;
+  }
+  
+  input:checked + .sheet-slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
