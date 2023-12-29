@@ -83,11 +83,115 @@
         <div class="sheet-main-column-right-collumn">
         </div> 
     </div>
-    <div class="sheet-main-column sheet-character-actions">
-
+    <div class="sheet-character-actions">
+        <div class="sheet-actions">
+            <fieldset class="repeating_actions">                                    
+                <div class="sheet-container-single-spell">
+                    <button type="roll" name="roll_spell1" class="buttonspell" value=""></button>
+                    <select class="sheet-tipoacao" name="attr_tipoacao">
+                        <option value="acao">Ação</option>
+                        <option value="bonus">Bônus</option>
+                        <option value="livre">Livre</option>
+                        <option value="passiva">Passiva</option>
+                        <option value="reacao">Reação</option>
+                    </select>
+                    <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value=""/>
+                    <select class="sheet-custoacao" name="attr_custoacao">
+                        <option value="-" selected>-</option>
+                        <option value="rep">Rep</option>
+                        <option value="1pe">1 PE</option>
+                        <option value="2pe">2 PE</option>
+                        <option value="3pe">3 PE</option>
+                        <option value="4pe">4 PE</option>
+                        <option value="5pe">5 PE</option>
+                    </select>
+                    <input type="checkbox" class="sheet-hiddencheckbox">
+                    <span class="sheet-hiddencheckboxcover">y</span>
+                    
+                    <div class="sheet-extra">
+                        <span>Descritores:</span>
+                        <input name="attr_descritor" type="text" spellcheck="false" value=""/>
+                        <textarea class="fullline" name="attr_spelldescription"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
     </div>
-    <div class="sheet-main-column sheet-character-spells">
+    <div class="sheet-character-spells">
+        <div class="sheet-spells">
+            <div class="sheet-spells-atributes">
+                <div>
+                    <span>ATRIBUTO CHAVE</span>
+                    <select class="sheet-camada" name="attr_camada">
+                        <option value="@{attr_character_strength}">Força</option>
+                        <option value="@{attr_character_dexterity}">Destreza</option>
+                        <option value="@{attr_character_constitution}">Constituição</option>
+                        <option value="@{attr_character_intelligence}">Inteligência</option>
+                        <option value="@{attr_character_wisdom}">Sabedoria</option>
+                        <option value="@{attr_character_charisma}">Carisma</option>
+                    </select>
+                </div>
+                <div>
+                    <span>BÔNUS DE ATAQUE</span>
+                    <input class="singleline" name="attr_bonusataquemagia" type="text" spellcheck="false" value=""/>
+                </div>
+            </div>
+            <div class="sheet-spells-container">
+                <fieldset class="repeating_spells">
+                    <div class="sheet-container-single-spell">
+                        <button type="roll" name="roll_spell4" class="buttonspell" value="&{template:spell}{{character=@{character_name}}}{{spellname=@{namespell}}}{{type=@{tiporitual}}}{{execution=@{spellexecucao}}}{{duration=@{spellduracao}}}{{range=@{spellalcance}}}{{targetarea=@{spellalvoarea}}}{{resistance=@{spellresistencia}}}{{description=@{spelldescription}}}{{cd=[[@{dt}+@{bonusdt}]]}} {{custoparanormal=[[30+?{Ritual|Base, 0|Discente, @{spelldiscentecusto}|Verdadeiro, @{spellverdadeiracusto}} ]]}} {{rolagemcusto=[[@{int}d20kh1+@{ocultismobonus}]]}} {{spelldiscentedescription=@{spelldiscentedescription} }} {{spellverdadeiradescription=@{spellverdadeiradescription}}}"></button>
+                        <select class="sheet-tipoacao" name="attr_tipoacao">
+                            <option value="acao">Ação</option>
+                            <option value="bonus">Bônus</option>
+                            <option value="livre">Livre</option>
+                            <option value="passiva" selected>Passiva</option>
+                            <option value="reacao">Reação</option>
+                        </select>
+                        <input class="sheet-spellname" name="attr_namespell" type="text" spellcheck="false" value=""/>
+                        <select class="sheet-custospell" name="attr_custospell">
+                            <option value=""></option>
+                            <option value="rep">Rep</option>
+                            <option value="1pe">1 PE</option>
+                            <option value="2pe">2 PE</option>
+                            <option value="3pe">3 PE</option>
+                            <option value="4pe">4 PE</option>
+                            <option value="5pe">5 PE</option>
+                        </select>
+                        <input type="checkbox" class="sheet-hiddencheckbox">
+                        <span class="sheet-hiddencheckboxcover">y</span>
+                        <div class="sheet-extra">
+                            <span>Camada</span>
+                            <select class="camada" name="attr_camada">
+                                <option value=""></option>
+                                <option value="truque">TRUQUE</option>
+                                <option value="superficial">SUPERFICIAL</option>
+                                <option value="rasa">RASA</option>
+                                <option value="profunda">PROFUNDA</option>
+                            </select>
 
+                            <span>Tipo</span>
+                            <select class="tipo" name="attr_tipo">
+                                <option value=""></option>
+                                <option value="ofensiva">OFENSIVA</option>
+                                <option value="utilitaria">UTILITÁRIA</option>
+                                <option value="controle">CONTROLE</option>
+                            </select>
+
+                            <span>Descritores</span>
+                            <input  class="singleline" name="attr_descritores" type="text" spellcheck="false" value=""/>  
+
+                            <span>Alcance</span>
+                            <input class="singleline" name="attr_spellalcance" type="text" spellcheck="false" value=""/>
+                            <span>Duração</span>
+                            <input class="singleline" name="attr_spellduracao" type="text" spellcheck="false" value=""/>
+                            
+                            <span class="fullline">Descrição</span>
+                            <textarea class="fullline" name="attr_spelldescription"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
     </div>
 </div>
 
