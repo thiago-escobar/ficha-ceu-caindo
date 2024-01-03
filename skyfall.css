@@ -10,7 +10,7 @@
     font-size: 16px;
     color: #424F66;
     display: grid;
-    width: 860px;
+    width: 940px;
     background-repeat: no-repeat;
     background-size: cover;
     column-gap: 22px;
@@ -35,9 +35,14 @@
     margin: 50px 10px 10px 10px;
 }
 
+.sheet-header-global input {
+    border: none;
+    background-color: rgb(222, 229, 255);
+}
+
 .sheet-header-left{
     float:left;
-    width: 45%;
+    width: 35%;
     padding: 10px;
     background-image: url("http://naiajogos.com.br/imagens_skyfall/logo.png");
     background-repeat: no-repeat;
@@ -46,9 +51,22 @@
     margin-left: -50px;
     padding-right: 25px;
 }
+
+.sheet-header-middle{
+    float:left;
+    width: 40%;
+}
+
 .sheet-header-right{
     float:left;
-    width: 55%
+    width: 25%;
+    padding-left: 15px;
+    padding: 5px 0px 5px 10px;
+}
+
+.sheet-header-right-stats > div {
+    float:left;
+    width: 50%;
 }
 
 .sheet-header-logo{
@@ -89,12 +107,17 @@
     margin-top: 10px;
     border-bottom: 3px solid #424F66;
 }
-.sheet-header-right-input{
+.sheet-header-middle-input{
     width: 30%;
     margin-right: 3.2%;
 }
-.sheet-header-right-last-input{
+.sheet-header-middle-last-input{
     width: 30%;
+}
+.sheet-header-right-input{
+    width: 55px;
+    height: 55px !important;
+    margin-right: 3.2%;
 }
 .sheet-header-line-label{
     width: 100%;
