@@ -80,43 +80,287 @@
             <span class="slider round">Magias</span>
         </label>
     </div>
-    <div class="sheet-main-column sheet-character-attributes">
-        <div class="sheet-attributes">
-            <div class="sheet-attribute-name">
-                <span>FOR</span><span>DES</span><span>CON</span><span>INT</span><span>SAB</span><span class="sheet-attribute-name-last">CAR</span>
+    <div class="sheet-character-attributes">
+        <div class="sheet-main-column">
+            <div class="sheet-attributes">
+                <div class="sheet-attribute-name">
+                    <span>FOR</span><span>DES</span><span>CON</span><span>INT</span><span>SAB</span><span class="sheet-attribute-name-last">CAR</span>
+                </div>
+                <div class="sheet-attribute-value">
+                    <input class="sheet-attribute-input" name="attr_character_strength" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_dexterity" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_constitution" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_intelligence" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_wisdom" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input sheet-attribute-last-input" name="attr_character_charisma" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                </div>
+                <div class="sheet-attribute-save-checks">
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_strenth_check" name="attr_save_strenth_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_dexterity_check" name="attr_save_dexterity_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_constitution_check" name="attr_save_constitution_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_intelligence_check" name="attr_save_intelligence_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_wisdom_check" name="attr_save_wisdom_check" value="str_check" />
+                    <input class="sheet-attribute-save-check sheet-attribute-save-last-check" type="checkbox" id="attr_save_charisma_check" name="attr_save_charisma_check" value="str_check" />
+                </div>
+                <div class="sheet-attribute-save-values">
+                    <input class="sheet-attribute-save-value" name="attr_save_strenth_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_dexterity_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_constitution_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_intelligence_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_wisdom_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                </div>
             </div>
-            <div class="sheet-attribute-value">
-                <input class="sheet-attribute-input" name="attr_character_strength" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-input" name="attr_character_dexterity" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-input" name="attr_character_constitution" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-input" name="attr_character_intelligence" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-input" name="attr_character_wisdom" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-input sheet-attribute-last-input" name="attr_character_charisma" type="text" spellcheck="false" placeholder=""  value="" type="number">
+            <div class="sheet-main-column-left-collumn">
+                <div class="sheet-skills-and-languages">
+                    <div class="sheet-skills">
+                        <div>
+                            <input class="sheet-header-middle-input" name="attr_proficient_bonus" type="text" spellcheck="false" placeholder=""  value="">
+                            <span>BÔNUS DE PROFICIÊNCIA</span>
+                        </div>
+                        <div>
+                            <!--APRESENTAÇÃO-->   
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APRESENTAÇÃO</span>
+                            </div>
+                            <!--APTIDÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <!--ARCANISMO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>ARCANISMO</span>
+                            </div>
+                            <!--ARCANISMO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>ARCANISMO</span>
+                            </div>
+                            <!--CULTURA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>CULTURA</span>
+                            </div>
+                            <!--DOUTRINAS--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>DOUTRINAS</span>
+                            </div>
+                            <!--DIPLOMACIA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>DIPLOMACIA</span>
+                            </div>
+                            <!--FURTIVIDADE--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>FURTIVIDADE</span>
+                            </div>
+                            <!--INTIMIDAÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>INTIMIDAÇÃO</span>
+                            </div>
+                            <!--INTUIÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>INTUIÇÃO</span>
+                            </div>
+                            <!--MEDICINA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MEDICINA</span>
+                            </div>
+                            <!--MAGITEC--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MAGITEC</span>
+                            </div>
+                            <!--MALANDRAGEM--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MALANDRAGEM</span>
+                            </div>
+                            <!--MANIPULAÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MANIPULAÇÃO</span>
+                            </div>
+                            <!--NATUREZA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>NATUREZA</span>
+                            </div>
+                            <!--PERCEPÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>PERCEPÇÃO</span>
+                            </div>
+                            <!--PREPARO FÍSICO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>PREPARO FÍSICO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet-language">
+                        <span>IDIOMAS E OUTRAS PROFICIÊNCIAS</span>
+                        <textarea></textarea>
+                    </div>
+                </div>            
             </div>
-            <div class="sheet-attribute-save-checks">
-                <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_strenth_check" name="attr_save_strenth_check" value="str_check" />
-                <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_dexterity_check" name="attr_save_dexterity_check" value="str_check" />
-                <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_constitution_check" name="attr_save_constitution_check" value="str_check" />
-                <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_intelligence_check" name="attr_save_intelligence_check" value="str_check" />
-                <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_wisdom_check" name="attr_save_wisdom_check" value="str_check" />
-                <input class="sheet-attribute-save-check sheet-attribute-save-last-check" type="checkbox" id="attr_save_charisma_check" name="attr_save_charisma_check" value="str_check" />
+            <div class="sheet-main-column-right-collumn">
+                <div class="sheet-init-health">
+                    <div class="sheet-initiative">
+                        <div>
+                            <span>INICIATIVA</span>
+                        </div>
+                        <div>
+                            <span>REDUÇÃO DE DANO</span>
+                        </div>
+                        <div>
+                            <span>DESLOCAMENTO</span>
+                            <span>TAMANHO</span>
+                        </div>
+                    </div>
+                    <div class="sheet-health-and-dices">
+                        <div>
+                            <div>
+                                <span>PONTOS DE VIDA TOTAIS</span>
+                            </div>
+                            <div>
+                                <span>PV TEMP.</span>
+                            </div>
+                            <div>
+                                <span>PONTOS DE VIDA ATUAIS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>DADOS DE VIDA TOTAIS</span>
+                            </div>
+                            <div>
+                                <span>DADO DE VIDA</span>
+                            </div>
+                            <div>
+                                <span>DADOS DE VIDA ATUAIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sheet-shadow-death">
+                    <div>
+                        <span>PONTOS DE SOMBRA</span>
+                    </div>
+                    <div>
+                        <span>TESTES DE MORTE</span>
+                    </div>
+                </div>
+                <div class="sheet-attacks">
+
+                </div>
+            </div> 
+        </div>
+        <div class="sheet-character-background">
+            <div class="sheet-textbox-div">
+                <span>LEGADO</span>
+                <input>
+                <textarea></textarea>
             </div>
-            <div class="sheet-attribute-save-values">
-                <input class="sheet-attribute-save-value" name="attr_save_strenth_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-save-value" name="attr_save_dexterity_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-save-value" name="attr_save_constitution_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-save-value" name="attr_save_intelligence_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-save-value" name="attr_save_wisdom_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+            <div class="sheet-textbox-div">
+                <span>MELANCOLIA</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>HERANÇAS</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>ANTECEDENTE</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>MALDIÇÃO</span>
+                <input>
+                <textarea></textarea>
             </div>
         </div>
-        <div class="sheet-main-column-left-collumn">
-            <div class="sheet-skills">
-                
-            </div>
-        </div>
-        <div class="sheet-main-column-right-collumn">
-        </div> 
     </div>
     <div class="sheet-character-actions">
         <div class="sheet-actions">

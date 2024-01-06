@@ -131,9 +131,16 @@
 .sheet-header-line-last-label{
     margin-right: 0px !important;
 }
-.sheet-main-column{
-    float:left;
-    width: 65%;
+.sheet-character-attributes{
+    display: grid;
+    grid-template-columns: 64% 34%;
+    column-gap: 2%;
+}
+.sheet-textbox-div > input,
+.sheet-textbox-div > textarea{
+    width: 100%;
+    overflow: none;
+    resize: none;
 }
 .sheet-attributes{
     height: 160px;
