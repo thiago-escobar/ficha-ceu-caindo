@@ -222,11 +222,244 @@
 }
 .sheet-skills{
     width: 100%;
-    height: 555px;
+    height: 592px;
     background-image: url("http://naiajogos.com.br/imagens_skyfall/pericias.png");
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: -10px;
+}
+
+.sheet-skills{
+  font-size: 15px;
+}
+
+.sheet-skills-header {
+  width: 238px;
+  margin-left: 25px;
+  top: 20px;
+  position: relative;
+}
+
+.sheet-skills-header input{
+  border: 1px solid black;
+  width: 40px; height: 40px;
+  background-color: #c9d1d7;
+}
+
+.sheet-skills-header span{
+  border: 1px solid black;
+  background-color: white;
+  padding: 3px 8px 3px 9px;
+  position: relative;
+  top:8px;
+}
+
+.sheet-skills-body select{
+  width: 53%;
+}
+
+.sheet-skills-body .sheet-big-check{
+  height: 20px;
+  width: 20px;
+}
+
+.sheet-skills-body{
+  border: 1px solid black;
+  background-color: white;
+  padding: 3px;
+  width: 230px;
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.sheet-skills-body div {
+  margin: 2px 0px 2px 0px;
+}
+
+.sheet-language{
+  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/languages.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 275px;
+  margin-left: -10px;
+  height: 365px;
+  margin-top: 10px;
+  padding: 19px;
+}
+
+.sheet-language span{
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.sheet-language textarea{
+  width: 216px;
+  margin-left: 5px;
+  height: 268px;
+  resize: none;
+}
+
+.sheet-init-health{
+  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/health-points.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: -10px;
+  padding: 8px 0px 8px 0px;
+  height: 330px;
+}
+
+.sheet-initiative{
+  display: grid;
+  grid-template-columns: 80px 80px 103px;
+  column-gap: 10px;
+  margin-left:20px;
+  margin-bottom:20px;
+}
+
+.sheet-initiative > div {
+  text-align: center;
+  margin-top: -3px;
+}
+
+.sheet-initiative span{
+  font-size: 8px;
+  top: -2px;
+  position: relative;
+}
+
+.sheet-initiative .sheet-big-box{
+  width: 60px;
+  height: 60px;
+  margin-top: -3px;
+}
+
+.sheet-initiative .sheet-small-box{
+  width: 85px;
+  margin-top: -19px;
+  height: 20px;
+}
+
+.sheet-health-and-dices > div{
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+  text-align: center;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-left: 21px;
+}
+
+.sheet-health-and-dices span{
+  font-size: 10px;
+  display: block;
+}
+
+.sheet-health-and-dices .sheet-big-box{
+  width: 60px;
+  height: 60px;
+}
+
+.sheet-health-and-dices .sheet-small-box{
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+}
+
+.sheet-health-and-dices .sheet-bottom-box{
+  margin-top: 25px;
+}
+
+.sheet-bottom-box .sheet-small-box{
+  margin-top: 5px;
+}
+
+.sheet-shadow-death{
+  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/shadow-save.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: -10px;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+  text-align: center;
+}
+
+.sheet-shadow-death div{
+  padding: 15px 10px 0px 10px;
+}
+
+.sheet-shadow-death span{
+  color: white;
+  font-size: 14px;
+}
+
+.sheet-shadow-death input{
+  background-color: #c9d1d7;
+  border: none;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.sheet-death-input-margin{
+  margin-top: 22px !important;
+}
+
+.sheet-shadow-death input:checked{
+  background-color: black;
+}
+
+.sheet-attacks{
+  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-start.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: -10px;
+}
+
+.sheet-character-background{
+  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/background-characteristcs.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: -10px;
+}
+
+.sheet-textbox-div {
+  border: 2px solid black;
+  background-color: white;
+  width: 280px;
+  margin-left: 21px;
+  margin-top: 18px;
+  height: 173px;
+  padding-top: 5px;
+}
+
+.sheet-textbox-div div {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sheet-textbox-div span {
+  margin-left: 3px;
+}
+
+.sheet-textbox-div input {
+  width: 160px;
+}
+
+.sheet-textbox-div textarea{
+  width: 263px;
+  height: 130px;
+  margin: 3px;
 }
 
 /* Navigation */
@@ -598,6 +831,10 @@
 .sheet-options .sheet-row > span {
     color: black;
   }
+
+.sheet-options .sheet-row.sheet-hidden { 
+  display: none; 
+}
   
 
 .sheet-top{
@@ -606,7 +843,16 @@
     column-gap: 2.5%;
 }
 
-.sheet-attacksgrid .sheet-options-flag {
+.sheet-attacks span {
+  display: block;
+  font-size: 9px;
+  line-height: 12px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px; }
+
+.sheet-attacks .sheet-options-flag {
     opacity: 0;
     position: absolute;
     top: 0px;
@@ -615,12 +861,8 @@
     height: 18px !important;
     z-index: 2;
   }
-  
-  .sheet-attacksgrid .sheet-options-flag:hover + span {
-    color: #000 !important;
-  }
-  
-  .sheet-attacksgrid input
+    
+  .sheet-attacks input
   .sheet-resources input[type=number] {
     width: 100%;
     text-align: center;
@@ -635,21 +877,17 @@
     color: black;
   }
   
-  .sheet-attacksgrid {
+  .sheet-attacks {
     padding-bottom: 10px;
-  }
-  
-  .sheet-attacksgrid {
     width: 240px;
+    margin-bottom: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    min-height: 150px;
     margin-bottom: 10px;
   }
   
-  .sheet-attacksgrid {
-    border: 1px solid #666;
-    border-radius: 5px;
-  }
-  
-  .sheet-attacksgrid .sheet-top span {
+  .sheet-attacks .sheet-top span {
     text-align: left;
     margin-left: 5px;
     color: #a0a0a0;
@@ -657,13 +895,9 @@
     display: inline-block;
     width: initial;
   }
+   
   
-  .sheet-attacksgrid {
-    min-height: 150px;
-    margin-bottom: 10px;
-  }
-  
-  .sheet-attacksgrid .sheet-display button[type=roll] {
+  .sheet-attacks .sheet-display button[type=roll] {
     background-color: transparent;
     color: black;
     border: none;
@@ -677,12 +911,12 @@
     line-height: normal;
   }
   
-  .sheet-attacksgrid .sheet-display button[type=roll]::before {
+  .sheet-attacks .sheet-display button[type=roll]::before {
     content: "" !important;
   }
   
-  .sheet-attacksgrid .sheet-display input
-  .sheet-attacksgrid .sheet-display span {
+  .sheet-attacks .sheet-display input
+  .sheet-attacks .sheet-display span {
     font-size: 12px;
     line-height: 12px;
     border-top-left-radius: 5px;
@@ -694,7 +928,7 @@
     font-weight: bold;
   }
   
-  .sheet-attacksgrid .sheet-display span {
+  .sheet-attacks .sheet-display span {
     min-height: 12px;
     display: inline-block;
     margin-top: 0px;
@@ -705,7 +939,7 @@
     white-space: nowrap;
   }
   
-  .sheet-attacksgrid .sheet-options-flag {
+  .sheet-attacks .sheet-options-flag {
     opacity: 0;
     position: absolute;
     top: 0px;
@@ -715,7 +949,9 @@
     z-index: 2;
   }
   
-  .sheet-attacksgrid .sheet-options-flag + span {
+  .sheet-attacks .sheet-options-flag + span {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: absolute;
     top: 0px;
@@ -725,38 +961,90 @@
     height: 18px;
     font-size: 20px;
     font-family: pictos;
-    color: #a0a0a0;
+    color: #A0A0A0;
     cursor: pointer;
     margin-top: 0px;
-    display: none;
+    display: none; 
   }
   
-  .sheet-attacksgrid .sheet-options-flag:hover + span {
+  .sheet-attacks .sheet-options-flag:hover + span {
     color: #000000;
   }
   
-  .sheet-attacksgrid .sheet-options-flag:checked + span  {
+  .sheet-attacks .sheet-options-flag:checked + span  {
     color: black;
-    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+  }
+
+  .sheet-attacksgrid .sheet-options {
+    display: none;
+    border-top: 2px dashed gold; 
+    padding-left: 5px; 
   }
   
-  .sheet-attacksgrid .attack:hover .sheet-options-flag + span  {
+  .sheet-attacks .sheet-attacksgrid:hover .sheet-options-flag + span  {
     display: flex;
   }
+
+  .sheet-attacksgrid .sheet-options input[type=text]{
+    display: inline-block;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid #D3D3D3;
+    padding: 0px;
+    width: initial; 
+  }
+
+  .sheet-attacksgrid .sheet-options select {
+    border-bottom: 1px solid #D3D3D3;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+    width: initial;
+    padding: 0px;
+    margin: 0px;
+    line-height: 18px;
+    height: 18px; 
+  }
+
+  .sheet-attacksgrid .sheet-options input[type=checkbox]{
+    width: 13px;
+    font-size: initial;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+  }
+
+  .sheet-attacksgrid .sheet-options input[type=text].sheet-num,
+  .sheet-options input[type=text].sheet-num {
+    width: 15px;
+    text-align: center; 
+  }
   
-  .sheet-attacksgrid .sheet-options-flag:checked ~ .options  {
+  .sheet-attacks .sheet-options-flag:checked ~ .sheet-options  {
     display: inherit;
   }
   
-  .sheet-attacksgrid .ammo {
+  .sheet-attacks .ammo {
     display: none;
   }
   
-  .ammoflag[value=on] + .sheet-attacksgrid .ammo {
+  .ammoflag[value=on] + .sheet-attacks .ammo {
     display: block;
   }
   
-  .licensecontainer .container:not(.npc) .sheet-attacksgrid  {
+  .licensecontainer .container:not(.npc) .sheet-attacks  {
     box-sizing: border-box;
     width: 100%;
     margin-top: 10px;
@@ -767,33 +1055,33 @@
     border-image-repeat: round;
   }
   
-  .sheet-darkmode .sheet-attacksgrid .display input {
+  .sheet-darkmode .sheet-attacks .display input {
     background-color: var(--dark-gray-enabled);
     color: var(--dark-primarytext);
   }
-  .sheet-darkmode .sheet-attacksgrid .display span {
+  .sheet-darkmode .sheet-attacks .display span {
     background-color: var(--dark-gray-enabled);
     color: var(--dark-primarytext);
   }
-  .sheet-darkmode .sheet-attacksgrid .display span[name=attr_global_damage_name] {
+  .sheet-darkmode .sheet-attacks .display span[name=attr_global_damage_name] {
     font-family: "Proxima Nova", "ProximaNova-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
   
-  .sheet-darkmode .sheet-attacksgrid .sheet-options-flag:checked + span, .sheet-darkmode .sheet-attacksgrid .sheet-options-flag:hover + span {
+  .sheet-darkmode .sheet-attacks .sheet-options-flag:checked + span, .sheet-darkmode .sheet-attacks .sheet-options-flag:hover + span {
     color: var(--dark-L60) !important;
   }
   
-  .sheet-darkmode .sheet-attacksgrid input {
+  .sheet-darkmode .sheet-attacks input {
     color: var(--dark-primarytext);
   }
   
   
-  .sheet-darkmode .sheet-attacksgrid .display button[type=roll] {
+  .sheet-darkmode .sheet-attacks .display button[type=roll] {
     color: var(--dark-primarytext);
     margin: 1px 0px;
   }
   
-  .sheet-darkmode .licensecontainer .container:not(.npc) .sheet-attacksgrid {
+  .sheet-darkmode .licensecontainer .container:not(.npc) .sheet-attacks {
     border-image-source: url(https://storage.googleapis.com/char-sheet-app-images-6e101411/D%26D5e/images/darkmode/5eBorder_dm.svg);
   }
   
@@ -807,3 +1095,4 @@
     height: 18px !important;
     z-index: 2;
   }
+
