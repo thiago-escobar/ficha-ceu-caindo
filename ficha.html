@@ -757,7 +757,7 @@
         <div class="sheet-actions">
             <fieldset class="repeating_actions">                                    
                 <div class="sheet-container-single-spell">
-                    <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao} }} {{nameaction=@{nameaction} }} {{custoacao=@{custoacao} }} {{info_actions=@{info_actions} }} {{descritores_actions=@{descritores_actions} }} {{alcance_actions=@{alcance_actions} }} {{alvo_actions=@{alvo_actions} }} {{duracao_actions=@{duracao_actions} }} {{component_actions=@{component_actions} }} {{gatilho_actions=@{gatilho_actions} }} {{ataque_actions=@{ataque_actions} }} {{acerto_actions=@{acerto_actions} }} {{erro_actions=@{erro_actions} }} {{efeito_actions=@{efeito_actions} }} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions} }}"></button>
+                    <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
                     <select class="sheet-tipoacao" name="attr_tipoacao">
                         <option value="acao">Ação</option>
                         <option value="bonus">Bônus</option>
@@ -801,7 +801,7 @@
                         <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-odd"><span>Efeito:</span> <input name="attr_efeito_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-even">
-                            <span>Modificações:</span>
+                            <span>Modificações:</span><br>
                             <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
                             <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
                             <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
@@ -834,7 +834,7 @@
             <div class="sheet-spells-container">
                 <fieldset class="repeating_spells">
                     <div class="sheet-container-single-spell">
-                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao} }} {{nameaction=@{nameaction} }} {{custoacao=@{custoacao} }} {{info_actions=@{info_actions} }} {{descritores_actions=@{descritores_actions} }} {{alcance_actions=@{alcance_actions} }} {{alvo_actions=@{alvo_actions} }} {{duracao_actions=@{duracao_actions} }} {{component_actions=@{component_actions} }} {{gatilho_actions=@{gatilho_actions} }} {{ataque_actions=@{ataque_actions} }} {{acerto_actions=@{acerto_actions} }} {{erro_actions=@{erro_actions} }} {{efeito_actions=@{efeito_actions} }} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions} }}"></button>
+                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
                         <select class="sheet-tipoacao" name="attr_tipospells">
                             <option value="acao">Ação</option>
                             <option value="bonus">Bônus</option>
@@ -878,7 +878,7 @@
                             <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-odd"><span>Efeito:</span> <input name="attr_efeito_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-even">
-                                <span>Modificações:</span>
+                                <span>Modificações:</span><br>
                                 <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
                                 <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
                                 <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
@@ -1109,28 +1109,7 @@
     });
 
     on("change:repeating_attacks:atkname change:repeating_attacks:atkflag change:repeating_attacks:atkattr_base change:repeating_attacks:atkmod change:repeating_attacks:atkmagic change:repeating_attacks:atkprofflag change:repeating_attacks:dmgflag change:repeating_attacks:dmgbase change:repeating_attacks:dmgattr change:repeating_attacks:dmgmod change:repeating_attacks:dmgtype change:repeating_attacks:dmg2flag change:repeating_attacks:dmg2base change:repeating_attacks:dmg2attr change:repeating_attacks:dmg2mod change:repeating_attacks:dmg2type change:repeating_attacks:saveflag change:repeating_attacks:savedc change:repeating_attacks:saveflat change:repeating_attacks:dmgcustcrit change:repeating_attacks:dmg2custcrit change:repeating_attacks:ammo change:repeating_attacks:saveattr change:repeating_attacks:atkrange", function(eventinfo) {
-        if(eventinfo.sourceType === "sheetworker") {
-            return;
-        }
-    
-        var source = eventinfo.sourceAttribute.substr(38);
-        var attackid = eventinfo.sourceAttribute.substring(17, 37);
-        if(source == "atkattr_base" || source == "savedc") {
-            getAttrs(["repeating_attacks_spellid", "repeating_attacks_spelllevel"], function(v) {
-                set = {};
-                if(v.repeating_attacks_spellid && v.repeating_attacks_spellid != "" && v.repeating_attacks_spelllevel && v.repeating_attacks_spelllevel != "") {
-                    var newVal = eventinfo.newValue == "spell" ? "spell" : _.last(eventinfo.newValue.split("_")[0].split("{"));
-                    set["repeating_attacks_atkattr_base"] = newVal == "spell" ? "spell" : "character_@{" + newVal + "}";
-                    set["repeating_attacks_savedc"] = newVal == "spell" ? "spell" : "(@{character_" + newVal + "}+8+@{proficient_bonus})";
-                    set["repeating_spell-" + v.repeating_attacks_spelllevel + "_" + v.repeating_attacks_spellid + "_spell_ability"] = newVal == "spell" ? "spell" : "@{character_" + newVal + "}+";
-                }
-                setAttrs(set, function() {
-                    update_attacks(attackid);
-                });
-            });
-        } else {
-            update_attacks(attackid);
-        }
+        update_attacks("all");
     });
       
       
