@@ -72,6 +72,7 @@
     width: 18%;
     padding-left: 15px;
     padding: 5px 0px 5px 10px;
+    text-align: center;
 }
 
 .sheet-header-right-stats > div {
@@ -212,6 +213,41 @@
   pointer-events: none; 
 }
 
+.sheet-skills-body select{
+    font-size: 10px;
+    margin: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    line-height: 10px;
+    height: 19px;
+}
+
+.sheet-attribute-save-check{
+    -webkit-appearance: none;
+  -moz-appearance: none;
+    appearance: none;
+}
+.sheet-attribute-save-check:checked {
+  background-color: #424F66 !important;
+}
+
+.sheet-skills-body input[type=checkbox]{
+    background-color: #c9d1d7;
+  border: none;
+  width: 18px;
+  height: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.sheet-skills-body div input:first-child{
+    width: 12px;
+  height: 12px;
+}
+.sheet-skills-body input[type=checkbox]:checked{
+    background-color: #424F66 !important;
+}
 .sheet-attribute-name label{
     width: 14%;
     margin-right: 2.5%;
@@ -293,10 +329,10 @@
 }
 .sheet-skills{
     width: 100%;
-    height: 592px;
+    height: 576px;
     background-image: url("http://naiajogos.com.br/imagens_skyfall/pericias.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     margin-left: -10px;
 }
 
@@ -395,10 +431,10 @@
 }
 
 .sheet-language textarea{
-  width: 258px;
-  margin-left: 5px;
-  height: 247px;
-  resize: none;
+    width: 258px;
+    margin-left: 15px;
+    height: 240px;
+    resize: none;
 }
 
 .sheet-init-health{
@@ -435,6 +471,7 @@
   width: 60px;
   height: 60px;
   margin-top: -3px;
+  margin-left: 3px;
 }
 
 .sheet-initiative .sheet-small-box{
@@ -531,11 +568,11 @@
   background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-end.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 45px;
-  width: 325px;
+  height: 40px;
+  width: 93%;
   background-size: 325px;
   margin-top: -14px;
-  padding-top: 7px;
+  padding: 10px 20px 0px 24px;
   background-repeat: no-repeat;
 }
 
@@ -1049,19 +1086,35 @@
 }
 
 .sheet-top{
-    display: grid;
+    /*display: grid;
     grid-template-columns: 50% 22.5% 22.5%;
     column-gap: 2.5%;
-    padding: 10px 10px 15px 10px
+    padding: 10px 10px 15px 10px*/
+    margin: 0px 0px 0px 24px;
+    height: 36px;
 }
 
+.sheet-attacks-name{
+    width: 250px;
+    float:left;
+}
+.sheet-attacks-bonus{
+    width: 54px;
+    float:left;
+}
+.sheet-attacks-damage{
+    width: 300px;
+    float:left;
+}
 .sheet-attacks span {
   display: block;
   font-size: 12px;
   line-height: 12px;
   width: 100%;
   text-align: center;
-  margin-top: 5px; }
+  margin-top: 5px;
+    color: #424F66 !important;
+}
 
 .sheet-attacks .sheet-options-flag {
     opacity: 0;
@@ -1090,11 +1143,11 @@
   }
   
   .sheet-attacks {
-    padding-bottom: 10px;
     width: 100%;
     border-radius: 5px;
     min-height: 150px;
     margin-bottom: 10px;
+    padding-top: 20px;
   }
   
   .sheet-attacks .sheet-top span {
@@ -1150,6 +1203,7 @@
     text-overflow: ellipsis;
     vertical-align: bottom;
     white-space: nowrap;
+    border-bottom: 1px solid #424F66;
   }
   
   .sheet-attacks .sheet-options-flag {
@@ -1264,7 +1318,7 @@
   .sheet-rolls-flag{
     opacity: 0;
     position: absolute;
-    width: 100px;
+    width: 150px !important;
     height: 20px;
   }
 
