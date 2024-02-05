@@ -517,8 +517,6 @@
                                 <div class="sheet-options">
                                     <div class="sheet-row">
                                         <span>NOME:</span> <input type="text" name="attr_atkname">
-                                    </div>
-                                    <div class="sheet-row">
                                         <input type="checkbox" name="attr_atkflag" value="{{attack=1}}" checked="checked"><span>ATAQUE:</span>
                                         <select name="attr_atkattr_base">
                                             <option value="@{character_strength}" selected="selected">FOR</option>
@@ -532,14 +530,12 @@
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_atkmod" placeholder="0"><span>+</span>
                                         <input type="checkbox" name="attr_atkprofflag" value="(@{proficient_bonus})" checked="checked" style="margin-left: 3px;"><span>PROFICIENCIA</span>
-                                    </div>
+                                    </div>                                    
                                     <div class="sheet-row">
-                                        <span style="margin-left: 17px;">DISTÂNCIA:</span>
+                                        <span>DISTÂNCIA:</span>
                                         <input type="text" name="attr_atkrange" style="width: 170px;">
-                                    </div>
-                                    <div class="sheet-row">
-                                        <span style="margin-left: 17px;">MAGIC BONUS:</span> <input class="num" type="text" name="attr_atkmagic" placeholder="0">
-                                        <span >CRITICO:</span> <input class="num" type="text" name="attr_atkcritrange" value="20" placeholder="20">
+                                        <span style="margin-left: 17px;">BÔNUS MÁGICO:</span> <input class="num" type="text" name="attr_atkmagic" placeholder="0">
+                                        <span >CRÍTICO:</span> <input class="num" type="text" name="attr_atkcritrange" value="20" placeholder="20">
                                     </div>
                                     <div class="sheet-row">
                                         <input type="checkbox" name="attr_dmgflag" value="{{damage=1}} {{dmg1flag=1}}" checked="checked"><span>DANO:</span>
@@ -555,15 +551,14 @@
                                             <option value="0">-</option>
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_dmgmod" placeholder="0">
-                                    </div>
-                                    <div class="sheet-row">
+
                                         <span style="margin-left: 17px;">TIPO:</span>
                                         <input type="text" name="attr_dmgtype" placeholder="Corte" style="width: 50px;">
                                         <span>CRIT:</span>
                                         <input type="text" name="attr_dmgcustcrit" placeholder="1d6" style="width: 80px;">
                                     </div>
                                     <div class="sheet-row">
-                                        <input type="checkbox" name="attr_dmg2flag" value="{{damage=1}} {{dmg2flag=1}}"><span>DAMAGE2:</span>
+                                        <input type="checkbox" name="attr_dmg2flag" value="{{damage=1}} {{dmg2flag=1}}"><span>DANO 2:</span>
                                         <input type="text" name="attr_dmg2base" placeholder="1d6" style="width: 50px;"><span>+</span>
                                         <select name="attr_dmg2attr">
                                             <option value="@{character_strength}" selected="selected">FOR</option>
@@ -576,13 +571,11 @@
                                             <option value="0">-</option>
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_dmg2mod" placeholder="0">
-                                    </div>
-                                    <div class="sheet-row">
                                         <span style="margin-left: 17px;">TIPO:</span>
                                         <input type="text" name="attr_dmg2type" placeholder="Slashing" style="width: 50px;">
                                         <span>CRIT:</span>
-                                        <input type="text" name="attr_dmg2custcrit" placeholder="1d6" style="width: 80px;">
-                                    </div>
+                                        <input type="text" name="attr_dmg2custcrit" placeholder="1d6" style="width: 80px;">                                       
+                                    </div>                                    
                                     <div class="sheet-row">
                                         <input type="checkbox" name="attr_saveflag" value="{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}"><span>SALVA GUARDA:</span>
                                         <select name="attr_saveattr">
@@ -607,10 +600,8 @@
                                         <input class="num flat" type="text" name="attr_saveflat" placeholder="10" value="10">
                                     </div>
                                     <div class="sheet-row">
-                                        <span>SAVE EFFECT:</span>
+                                        <span>EFEITO DE SALVAGUARDA:</span>
                                         <input type="text" name="attr_saveeffect" placeholder="half damage" style="width: 160px;">
-                                    </div>
-                                    <div class="sheet-row ammo">
                                         <span>MUNIÇÃO:</span>
                                         <input type="text" name="attr_ammo" placeholder="Flechas" style="width: 160px;">
                                     </div>
@@ -621,9 +612,9 @@
                                 </div>
                                 <div class="sheet-display sheet-display-attack" style="display: grid; grid-template-columns: 1fr 90px; grid-template-columns: 1fr 78px; gap: 5px;">
                                     <button type="roll" name="roll_attack" value="@{rollbase}">
-                                        <span name="attr_atkname" style="width: 130px; margin-left:-13px; text-align: left;"></span>
-                                        <input type="text" name="attr_atkbonus" style="width: 40px; text-align: center;" value="">
-                                        <input type="text" name="attr_atkdmgtype" style="width: 90px;" value="">
+                                        <span name="attr_atkname" style="width: 230px; text-align: left;"></span>
+                                        <input type="text" name="attr_atkbonus" style="width: 60px; text-align: center;" value="">
+                                        <input type="text" name="attr_atkdmgtype" style="width: 300px;" value="">
                                     </button>
                                 </div>
                                 <input type="hidden" name="attr_rollbase">

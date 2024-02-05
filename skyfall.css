@@ -33,11 +33,13 @@
 .sheet-header-global {
     border: 3px solid #424F66;
     margin: 50px 10px 10px 10px;
+    font-family: 'Bree Serif', serif !important;
 }
 
 .sheet-header-global input {
     border: none;
     background-color: rgb(222, 229, 255);
+    font-family: 'Bree Serif', serif !important;
 }
 
 .sheet-header-left{
@@ -538,7 +540,7 @@
 }
 
 .sheet-character-background{
-  background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/background-characteristcs.png");
+  background-color: #c9d1d7;
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -736,7 +738,7 @@
     transform: translateX(13px);
   }
 
-.sheet-character-actions, .sheet-character-spells{
+.sheet-character-actions, .sheet-character-spells, .sheet-character-equipment{
     background-color: #c9d1d7;
     padding: 10px;
 }
@@ -1436,6 +1438,18 @@
     float:left;
     width: 34%;
 }
+
+.sheet-collumn-initiative input{
+  text-align: center;
+  font-size: 25px !important;
+  font-family: 'Bree Serif', serif !important;
+  font-weight: bold;
+}
+
+.sheet-collumn-initiative .sheet-small-box{
+  font-size: 15px !important;
+}
+
 .sheet-collumn-language{
     float:left;
     width: 36%;
