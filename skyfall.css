@@ -42,7 +42,7 @@
 
 .sheet-header-left{
     float:left;
-    width: 35%;
+    width: 42%;
     padding: 10px;
     background-image: url("http://naiajogos.com.br/imagens_skyfall/logo.png");
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@
 
 .sheet-header-right{
     float:left;
-    width: 25%;
+    width: 18%;
     padding-left: 15px;
     padding: 5px 0px 5px 10px;
 }
@@ -89,6 +89,7 @@
     width: 100%;
     text-align: right;
     margin-top: 50px;
+    
 }
 
 .sheet-header-name-input{
@@ -103,8 +104,8 @@
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin-top: 27px;
-    margin-left: 20px;
+    margin-top: 53px;
+    margin-left: 100px;
 }
 .sheet-header-pronoums-input{
     display: inline-block;
@@ -133,10 +134,16 @@
 .sheet-header-middle-last-input{
     width: 30%;
 }
+.sheet-header-total-input{
+    width: 100%;
+    margin-right: 3.2%;
+}
 .sheet-header-right-input{
     width: 55px;
     height: 55px !important;
     margin-right: 3.2%;
+    font-size: 25px !important;
+    text-align: center;
 }
 .sheet-header-line-label{
     width: 100%;
@@ -147,13 +154,22 @@
     text-align: center;
     margin-right: 3.2%;
 }
+.sheet-header-line-label-total{
+    width: 100%;
+}
+.sheet-header-line-label-total span{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 3.2%;
+}
 .sheet-header-line-last-label{
     margin-right: 0px !important;
 }
 .sheet-character-attributes{
-    display: grid;
+    /*display: grid;
     grid-template-columns: 64% 34%;
-    column-gap: 2%;
+    column-gap: 2%;*/
 }
 .sheet-textbox-div > input,
 .sheet-textbox-div > textarea{
@@ -167,6 +183,13 @@
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: -10px;
+    float:left;
+    width: 65%;
+}
+
+.sheet-face-skills{
+    float: right;
+    width: 34%;
 }
 .sheet-attribute-name{
     width: 92.7%;
@@ -263,6 +286,9 @@
     width: 53%;
     margin-top:10px;
 }
+.sheet-skills-and-languages{
+    margin-top:10px;
+}
 .sheet-skills{
     width: 100%;
     height: 592px;
@@ -349,22 +375,27 @@
   background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/languages.png");
   width: 100%;
   background-repeat: no-repeat;
-  background-size: 275px;
+  background-size: 100% 100%;
   margin-left: -10px;
-  height: 365px;
+  height: 333px;
   margin-top: 10px;
-  padding: 19px;
+}
+
+.sheet-language-intern{
+    padding: 25px 20px;
 }
 
 .sheet-language span{
   font-size: 12px;
-  margin-left: 5px;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .sheet-language textarea{
-  width: 216px;
+  width: 258px;
   margin-left: 5px;
-  height: 268px;
+  height: 247px;
   resize: none;
 }
 
@@ -376,6 +407,7 @@
   margin-left: -10px;
   padding: 8px 0px 8px 0px;
   height: 330px;
+  margin-top: 10px;
 }
 
 .sheet-initiative{
@@ -446,19 +478,17 @@
   background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/shadow-save.png");
   width: 100%;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   margin-left: -10px;
-  height: 130px;
+  height: 160px;
   display: grid;
   grid-template-columns: 48% 48%;
   column-gap: 4%;
   text-align: center;
-  margin-top: 7px;
-  margin-bottom: 35px;
 }
 
 .sheet-shadow-death div{
-  padding: 15px 10px 0px 10px;
+  padding: 37px 10px 0px 10px;
 }
 
 .sheet-shadow-death span{
@@ -576,6 +606,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    border-bottom: 1px solid #DDDDDD
 }
 
 .sheet-main .sheet-navigation-tabs label {
@@ -588,6 +619,7 @@
     text-shadow: 0 1px 0 rgba(255,255,255,.8);
     border-radius: 5px 0 0 0;
     box-shadow: 0 2px 2px rgba(0,0,0,.4);
+    border: 1px solid #DDDDDD;
 }
 
 .sheet-main .sheet-navigation-tabs label:hover,
@@ -623,7 +655,7 @@
 }
 
 .sheet-switch-selected::after {
-    background: #222b54 !important;
+    background: #424F66 !important;
     z-index: 3;
 }
 
@@ -645,10 +677,11 @@
 .sheet-switch {
     position: relative;
     display: inline-block; 
-    height: 20px !important;
+    height: 25px !important;
     margin-bottom: 0px !important;
     width: 120px !important;
     text-align: center;
+    padding: 0px !important;
   }
   
   /* Hide default HTML checkbox */
@@ -659,16 +692,35 @@
     height: 0;
   }
 
+.sheet-character-attributes-tab{
+    width: 105px !important;
+}
+.sheet-character-characteristics-tab{
+    width: 160px !important;
+}
+.sheet-character-equipment-tab{
+    width: 140px !important;
+}
+.sheet-character-actions-tab{
+    width: 70px !important;
+}
+.sheet-character-spells-tab{
+    width: 85px !important;
+}
+
  /* The slider */
  .sheet-slider {
     cursor: pointer;
     height: 20px !important;
     -webkit-transition: .4s;
     transition: .4s;
+    line-height: 21px !important;
   }
   
   .sheet-switch-selected {
-    background-color: #222b54 !important;
+    /*background-color: #C9D1D7 !important;*/
+    background-color: #424F66 !important;
+    /*background-color: #222b54 !important;*/
     color: white !important;
   }
 
@@ -1037,7 +1089,7 @@
   
   .sheet-attacks {
     padding-bottom: 10px;
-    width: 325px;
+    width: 100%;
     border-radius: 5px;
     min-height: 150px;
     margin-bottom: 10px;
@@ -1349,8 +1401,6 @@
 }
 
 .sheet-rolltemplate-actspell .sheet-span-info-header{
-  font-weight: bold;
-  font-family: 'Bree Serif', serif;
   font-size: 18px;
 }
 
@@ -1372,4 +1422,25 @@
 .sheet-rolltemplate-actspell .sheet-actionspell-black{
   background-color: #D3D3D3;
   padding: 5px;
+}
+
+.sheet-attributes-secound-part{
+    width: 100%;
+    display: block;
+}
+.sheet-collumn-skills{
+    float:left;
+    width: 30%;
+}
+.sheet-collumn-initiative{
+    float:left;
+    width: 34%;
+}
+.sheet-collumn-language{
+    float:left;
+    width: 36%;
+}
+.sheet-collumn-attack{
+    float:left;
+    width: 70%;
 }

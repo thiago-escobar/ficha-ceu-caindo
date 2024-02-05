@@ -31,9 +31,9 @@
                 <span class="sheet-header-line-last-label">JOGADORE</span>
             </div>
             <div class="sheet-header-line-inputs">
-                <input class="sheet-header-middle-input" name="attr_character_trilha" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-total-input" name="attr_character_trilha" type="text" spellcheck="false" placeholder=""  value="">
             </div>
-            <div class="sheet-header-line-label">
+            <div class="sheet-header-line-label-total">
                 <span>TRILHA</span>
             </div>            
         </div>
@@ -149,7 +149,24 @@
                     <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
                 </div>
             </div>
-            <div class="sheet-main-column-left-collumn">
+        </div>
+        <div class="sheet-face-skills">
+            <div class="sheet-shadow-death">
+                <div>
+                    <span>PONTOS DE SOMBRA</span><br>
+                    <input type="checkbox" name="attr_shadowcheck_um"><input type="checkbox" name="attr_shadowcheck_dois"><input type="checkbox" name="attr_shadowcheck_tres"><br>
+                    <input type="checkbox" name="attr_shadowcheck_quatro"><input type="checkbox" name="attr_shadowcheck_cinco">
+                </div>
+                <div>
+                    <span>TESTES DE MORTE</span><br>
+                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_um">
+                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_dois">
+                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_tres">
+                </div>
+            </div>
+        </div>
+        <div class="sheet-attributes-secound-part">
+            <div class="sheet-collumn-skills">
                 <div class="sheet-skills-and-languages">
                     <div class="sheet-skills">
                         <div class="sheet-skills-header">
@@ -415,9 +432,9 @@
                             </div>
                         </div>
                     </div>                    
-                </div>            
+                </div>
             </div>
-            <div class="sheet-main-column-right-collumn">
+            <div class="sheet-collumn-initiative">
                 <div class="sheet-init-health">
                     <div class="sheet-initiative">
                         <div>
@@ -470,6 +487,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="sheet-collumn-language">
+                <div class="sheet-language">
+                    <div class="sheet-language-intern">
+                        <span>IDIOMAS E OUTRAS PROFICIÊNCIAS</span>
+                        <textarea name="attr_languages"></textarea>
+                    </div>
+                </div> 
+            </div>
+            <div class="sheet-collumn-attack">
                 <div class="sheet-all-actions">
                     <div class="sheet-attacks">
                         <div class="sheet-top">
@@ -556,7 +583,7 @@
                                         <span>CRIT:</span>
                                         <input type="text" name="attr_dmg2custcrit" placeholder="1d6" style="width: 80px;">
                                     </div>
-                                    <!--<div class="sheet-row">
+                                    <div class="sheet-row">
                                         <input type="checkbox" name="attr_saveflag" value="{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}"><span>SALVA GUARDA:</span>
                                         <select name="attr_saveattr">
                                             <option value="Força" selected="selected">FOR</option>
@@ -582,7 +609,7 @@
                                     <div class="sheet-row">
                                         <span>SAVE EFFECT:</span>
                                         <input type="text" name="attr_saveeffect" placeholder="half damage" style="width: 160px;">
-                                    </div>-->
+                                    </div>
                                     <div class="sheet-row ammo">
                                         <span>MUNIÇÃO:</span>
                                         <input type="text" name="attr_ammo" placeholder="Flechas" style="width: 160px;">
@@ -617,30 +644,21 @@
                         <!-- Ataques -->                    
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div>
+        <!--div>
+            <div class="sheet-main-column-right-collumn">
+                
+                
+            <!--/div> 
         </div>
         <div class="sheet-face-skills">
-            
-
-            <div class="sheet-shadow-death">
-                <div>
-                    <span>PONTOS DE SOMBRA</span><br>
-                    <input type="checkbox" name="attr_shadowcheck_um"><input type="checkbox" name="attr_shadowcheck_dois"><input type="checkbox" name="attr_shadowcheck_tres"><br>
-                    <input type="checkbox" name="attr_shadowcheck_quatro"><input type="checkbox" name="attr_shadowcheck_cinco">
-                </div>
-                <div>
-                    <span>TESTES DE MORTE</span><br>
-                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_um">
-                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_dois">
-                    <input type="checkbox" class="sheet-death-input-margin" name="attr_deathcheck_tres">
-                </div>
-            </div>
-            
-            <div class="sheet-language">
-                <span>IDIOMAS E OUTRAS PROFICIÊNCIAS</span>
-                <textarea name="attr_languages"></textarea>
-            </div>            
+                       
         </div>
+        <div class="sheet-all-actions">
+            <div class="sheet-attacks">
+            </div>
+        </div-->
     </div>
     <div class="sheet-characteristics">
         <div class="sheet-character-background">
