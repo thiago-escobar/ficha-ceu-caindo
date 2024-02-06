@@ -556,6 +556,12 @@
   background-color: black;
 }
 
+.sheet-death-input-margin:checked{
+  /*background-color: black;*/
+  background-image: url("https://raw.githubusercontent.com/thiago-escobar/ficha-ceu-caindo/main/imgs/death.png");
+  background-size: 100%;
+}
+
 .sheet-attacks{
   background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-start.png");
   width: 100%;
