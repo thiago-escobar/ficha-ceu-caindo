@@ -46,9 +46,9 @@
     float:left;
     width: 42%;
     padding: 10px;
-    background-image: url("http://naiajogos.com.br/imagens_skyfall/logo.png");
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/logo.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 50%;
     margin-top: -50px;
     margin-left: -50px;
     padding-right: 25px;
@@ -337,7 +337,7 @@
 }
 
 .sheet-skills{
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .sheet-skills-header {
@@ -362,7 +362,7 @@
 }
 
 .sheet-skills-body span{
-  color:  #424F66;
+  color: #c9d1d7;
 }
 
 .sheet-active-element {
@@ -383,7 +383,7 @@
 }
 
 .sheet-skills-active span{
-  color: #222b54;
+  color: #424F66;
   cursor: pointer;
 }
 
@@ -741,7 +741,7 @@
     width: 140px !important;
 }
 .sheet-character-actions-tab{
-    width: 70px !important;
+    width: 170px !important;
 }
 .sheet-character-spells-tab{
     width: 85px !important;
@@ -1044,6 +1044,7 @@
 .sheet-row {
   margin:0px;
   background-color: #c9d1da;
+  margin-bottom: 10px;
 }
 
 .sheet-row::before{
@@ -1082,7 +1083,9 @@
 }
   
 .sheet-row textarea{
-  height:30px; resize: none;
+  height:54px;
+  resize: none;
+  width: 90%;
 }
 
 .sheet-top{
@@ -1244,10 +1247,15 @@
     display: -ms-flexbox;
     display: flex; 
   }
+  
+  .sheet-attacksgrid{
+      padding: 0 10px 0 0;
+  }
 
   .sheet-attacksgrid .sheet-options {
     display: none;
-    border-top: 2px dashed gold; 
+    border-top: 2px dashed #424F66;
+    border-bottom: 2px dashed #424F66; 
     padding: 12px; 
   }
   
@@ -1263,12 +1271,12 @@
     display: inline-block;
     text-align: left;
     font-size: 12px;
-    padding: 0px;
+    padding: 3px;
     width: initial; 
   }
 
   .sheet-attacksgrid .sheet-options select {
-    border-bottom: 1px solid #D3D3D3;
+    /*border-bottom: 1px solid #D3D3D3;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -1286,7 +1294,14 @@
     padding: 0px;
     margin: 0px;
     line-height: 18px;
-    height: 18px; 
+    height: 18px; */
+    width: initial;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0px;
+    line-height: 18px;
+    height: 25px;
+    padding-left: 5px;
   }
 
   .sheet-attacksgrid .sheet-options span{
@@ -1392,21 +1407,31 @@
   }
 
 /* Roll Templates */
-.sheet-rolltemplate-atkdmg{
+.sheet-rolltemplate-atkdmg,
+.sheet-rolltemplate-skillroll{
   background-image: url('https://imgsrv.roll20.net/?src=https%3A//raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-start.png');
   background-repeat: no-repeat;
   background-size: 100%;
   padding:15px;  
 }
 
+.sheet-rolltemplate-atkdmg span,
+.sheet-rolltemplate-skillroll span{
+  color: black;
+}
+
 .sheet-rolltemplate-atkdmg .sheet-charname, .sheet-rolltemplate-atkdmg .sheet-result,
 .sheet-rolltemplate-atkdmg .sheet-sublabel, .sheet-rolltemplate-atkdmg .sheet-label,
-.sheet-rolltemplate-atkdmg .sheet-desc{
+.sheet-rolltemplate-atkdmg .sheet-desc,
+.sheet-rolltemplate-skillroll .sheet-charname, .sheet-rolltemplate-skillroll .sheet-result,
+.sheet-rolltemplate-skillroll .sheet-sublabel, .sheet-rolltemplate-skillroll .sheet-label,
+.sheet-rolltemplate-skillroll .sheet-desc{
   padding-bottom: 15px;
   margin-bottom: 1px solid black;
 }
 
-.sheet-rolltemplate-atkdmg .sheet-charname span{
+.sheet-rolltemplate-atkdmg .sheet-charname span,
+.sheet-rolltemplate-skillroll .sheet-charname span{
   font-size: 20px;
   font-weight: bold;
   font-family: 'Bree Serif', serif;
@@ -1438,7 +1463,12 @@
   padding:15px;  
 }
 
-.sheet-rolltemplate-actspell .sheet-actionspell-header span{
+.sheet-rolltemplate-actspell span{
+  color: black;
+}
+
+.sheet-rolltemplate-actspell .sheet-actionspell-header span,
+.sheet-rolltemplate-skillroll .sheet-actionspell-header span{
   font-weight: bold;
   font-family: 'Bree Serif', serif;
   font-size: 18px;
@@ -1450,17 +1480,20 @@
   font-family: 'Bree Serif', serif;
 }
 
-.sheet-rolltemplate-actspell .sheet-span-info{
+.sheet-rolltemplate-actspell .sheet-span-info,
+.sheet-rolltemplate-skillroll .sheet-span-info{
   font-weight: bold;
   font-family: 'Bree Serif', serif;
   margin-right: 5px;
 }
 
-.sheet-rolltemplate-actspell .sheet-span-info-header{
+.sheet-rolltemplate-actspell .sheet-span-info-header,
+.sheet-rolltemplate-skillroll .sheet-span-info-header{
   font-size: 18px;
 }
 
-.sheet-rolltemplate-actspell .sheet-actionspell-info{
+.sheet-rolltemplate-actspell .sheet-actionspell-info,
+.sheet-rolltemplate-skillroll .sheet-actionspell-info{
   background-color: white;
   padding: 5px;
 }
