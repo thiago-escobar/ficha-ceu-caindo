@@ -1253,15 +1253,15 @@
     display: -ms-flexbox;
     display: flex; 
   }
-  
+
   .sheet-attacksgrid{
-      padding: 0 10px 0 0;
+    padding: 0 10px 0 0;
   }
 
   .sheet-attacksgrid .sheet-options {
     display: none;
-    border-top: 2px dashed #424F66;
-    border-bottom: 2px dashed #424F66; 
+    border-top: 2px dashed #424F66; 
+    border-bottom: 2px dashed #424F66;
     padding: 12px; 
   }
   
