@@ -593,7 +593,7 @@
 .sheet-textbox-div {
   border: 2px solid black;
   background-color: white;
-  width: 280px;
+  width: 250px;
   margin-left: 21px;
   margin-top: 18px;
   height: 173px;
@@ -611,11 +611,11 @@
 }
 
 .sheet-textbox-div input {
-  width: 160px;
+  width: 100%;
 }
 
 .sheet-textbox-div textarea{
-  width: 263px;
+  width: 233px;
   height: 130px;
   margin: 3px;
 }
@@ -1462,7 +1462,7 @@
 }
 
 /*Action & Spells*/
-.sheet-rolltemplate-actspell{
+.sheet-rolltemplate-actspell, .sheet-rolltemplate-characteristic{
   background-image: url('https://imgsrv.roll20.net/?src=https%3A//raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-start.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1474,13 +1474,15 @@
 }
 
 .sheet-rolltemplate-actspell .sheet-actionspell-header span,
-.sheet-rolltemplate-skillroll .sheet-actionspell-header span{
+.sheet-rolltemplate-skillroll .sheet-actionspell-header span,
+.sheet-rolltemplate-characteristic .sheet-actionspell-header span  {
   font-weight: bold;
   font-family: 'Bree Serif', serif;
   font-size: 18px;
 }
 
-.sheet-rolltemplate-actspell .sheet-charname span{
+.sheet-rolltemplate-actspell .sheet-charname span,
+.sheet-rolltemplate-characteristic .sheet-charname span{
   font-size: 20px;
   font-weight: bold;
   font-family: 'Bree Serif', serif;
@@ -1499,9 +1501,20 @@
 }
 
 .sheet-rolltemplate-actspell .sheet-actionspell-info,
-.sheet-rolltemplate-skillroll .sheet-actionspell-info{
+.sheet-rolltemplate-skillroll .sheet-actionspell-info,
+.sheet-rolltemplate-characteristic .sheet-actionspell-info{
   background-color: white;
   padding: 5px;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillreroll {
+  margin-top: 7px;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillreroll a{
+  padding: 5px;
+  color: white;
+  background-color: #222b54;
 }
 
 .sheet-rolltemplate-actspell .sheet-actionspell-descriptor{

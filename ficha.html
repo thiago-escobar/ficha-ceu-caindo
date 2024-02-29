@@ -662,42 +662,54 @@
             <div class="sheet-characteristics-base">
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>LEGADO</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_legacy}}} {{description=@{descriptionlegacy}}}">
+                            <span>LEGADO</span>
+                        </button>
                         <input name="attr_character_legacy" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptionlegacy"></textarea>
                 </div>                
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>HERANÇAS</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_heritage}}} {{description=@{descriptionheritage}}}">
+                            <span>HERANÇAS</span>
+                        </button>
                         <input name="attr_character_heritage" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptionheritage"></textarea>
                 </div>
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>ANTECEDENTE</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_antecedent}}} {{description=@{descriptionantecedent}}}">
+                            <span>ANTECEDENTE</span>
+                        </button>
                         <input name="attr_character_antecedent" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptionantecedent"></textarea>
                 </div>
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>MALDIÇÃO</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_curse}}} {{description=@{descriptioncurse}}}">
+                            <span>MALDIÇÃO</span>
+                        </button>
                         <input name="attr_character_curse" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptioncurse"></textarea>
                 </div>
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>MELANCOLIA</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_melancholy}}} {{description=@{descriptionmelancholy}}}">
+                            <span>MELANCOLIA</span>
+                        </button>
                         <input name="attr_character_melancholy" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptionmelancholy"></textarea>
                 </div>
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>Classe</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{character_class}}} {{description=@{descriptionclass}}}">
+                            <span>CLASSE</span>
+                        </button>
                         <input name="attr_character_class" type="text" spellcheck="false" placeholder=""  value="">
                     </div>
                     <textarea name="attr_descriptionclass"></textarea>
@@ -706,7 +718,9 @@
             <fieldset class="repeating_characteristics">
                 <div class="sheet-textbox-div">
                     <div>
-                        <span>NOME:</span>
+                        <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{nomecharacteristics}}} {{description=@{descriptioncharacteristics}}}">
+                            <span>NOME:</span>
+                        </button>
                         <input name="attr_nomecharacteristics" type="text" spellcheck="false" class="" value="">
                     </div>
                     <textarea name="attr_descriptioncharacteristics"></textarea>
@@ -815,7 +829,7 @@
                         <div class="sheet-odd"><span>Acerto:</span> <input name="attr_acerto_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-odd"><span>Efeito:</span> <textarea class="sheet-effect-textarea" name="attr_efeito_actions" type="text" spellcheck="false" value=""></textarea></div>
-                        <div class="sheet-odd"><span>Especial:</span> <input name="attr_especial_actions" type="text" spellcheck="false" value=""></div>
+                        <div class="sheet-odd"><span>Especial:</span> <textarea name="attr_especial_actions" type="text" spellcheck="false" value=""></textarea></div>
                         <div class="sheet-even">
                             <span>Modificações:</span><br>
                             <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -893,7 +907,7 @@
                             <div class="sheet-odd"><span>Acerto:</span> <input name="attr_acerto_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-odd"><span>Efeito:</span> <textarea class="sheet-effect-textarea" name="attr_efeito_spells" type="text" spellcheck="false" value=""></textarea></div>
-                            <div class="sheet-odd"><span>Especial:</span> <input name="attr_especial_actions" type="text" spellcheck="false" value=""></div>
+                            <div class="sheet-odd"><span>Especial:</span> <textarea name="attr_especial_actions" type="text" spellcheck="false" value=""></textarea></div>
                             <div class="sheet-even">
                                 <span>Modificações:</span><br>
                                 <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -977,7 +991,11 @@
                 const atribute_name = {
                     "strength": "Força", "dexterity": "Destreza", "constitution": "Constituição", "intelligence": "Inteligência", "wisdom": "Sabedoria", "charisma": "Carisma"
                 }
-                startRoll(`&{template:skillroll} {{character=${v.character_name}}} {{pericia=${atribute_name[attribute]}}} {{rolagem=[[1d20+${v["selectedrawvalue"]}]]}}`, diceroll => {
+
+                let roll_construction = `?{Rolagem|Simples, 1d20|Vantagem, 2d20kh1|Desvantagem, 2d20kl1}+${v["selectedrawvalue"]} + (@{save_${attribute}_check} * @{proficient_bonus}&#41; + ?{Bônus|0}`;
+                                
+                startRoll(`&{template:skillroll} {{character=${v.character_name}}} {{pericia=${atribute_name[attribute]}}} {{rolagem=[[${roll_construction}]]}} {{reroll=${roll_construction} }}`, diceroll => {
+                    
                 });                
 
                 $20(`.sheet-attr-span-${attribute}`).removeClass("sheet-active-element");
@@ -1013,16 +1031,22 @@
             if(arr_skill[0] == "aptidaoum"){ pericia_name = pericia_name +" " + v.apidaoum_selectbox; }
             if(arr_skill[0] == "aptidaodois"){ pericia_name = pericia_name + " " + v.apidaodois_selectbox; }
             if(arr_skill[0] == "aptidaotres"){ pericia_name = pericia_name + " " + v.apidaotres_selectbox; }
+
+            let roll_construction = "";                 
             
             if(arr_skill[1] == "simples"){
-                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}}{{rolagem=[[1d20+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                roll_construction = `1d20+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
             }
             if(arr_skill[1] == "vantagem"){
-                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}}{{rolagem=[[2d20kh1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                roll_construction = `2d20kh1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
             }
             if(arr_skill[1] == "desvantagem"){
-                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}}{{rolagem=[[2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                roll_construction = `2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
             }
+
+            console.log(roll_construction);
+
+            startRoll(`&{template:skillroll}{{character=@{character_name}}} {{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}} {{rolagem=[[ ${roll_construction} ]]}} {{reroll=${roll_construction} }}`, diceroll => {});
 
             ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].forEach(stat => {
                 $20(`.sheet-attr-span-${stat}`).removeClass("sheet-active-element");
@@ -1620,5 +1644,22 @@
         <div class="sheet-actionspell-info">
             <span class="sheet-span-info">Rolagem</span><span>{{rolagem}}</span>
         </div>
+        <div class="sheet-skillreroll">
+            <span>[ReRoll](`/r {{reroll}})</span>
+        </div>
     </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-characteristic">
+    <div class="container-characteristic">
+        <div class="charname">
+            <span>{{character_name}}</span>
+        </div>
+        <div class="sheet-actionspell-header">
+            <span>{{name}}</span>
+        </div>
+        <div class="sheet-actionspell-info">
+            <span>{{description}}</span>
+        </div>
+    </div>   
 </rolltemplate>
