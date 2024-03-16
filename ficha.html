@@ -4,37 +4,51 @@
         <div class="sheet-header-left">
             <span class="sheet-header-name">NOME DA PERSONAGEM</span>
             <input class="sheet-header-name-input" name="attr_character_name" type="text" spellcheck="false" placeholder=""  value="">
-            <span class="sheet-header-pronoums">PRONOMES
-                <input class="sheet-header-pronoums-input" name="attr_character_pronoum" type="text" spellcheck="false" placeholder=""  value="">
+            <span class="sheet-header-pronoums">
+                <div style="float:left;">                    
+                    <input class="sheet-header-pronoums-input" name="attr_character_player" type="text" spellcheck="false" placeholder=""  value=""><br>
+                    <span>JOGADORE</span>
+                </div>
+                <div>                    
+                    <input class="sheet-header-pronoums-input" name="attr_character_pronoum" type="text" spellcheck="false" placeholder=""  value=""><br>
+                    <span>PRONOMES</span>
+                </div>
             </span>
         </div>
         <div class="sheet-header-middle">
             <div class="sheet-header-line-inputs">
-                <input class="sheet-header-middle-input-level" name="attr_character_level" type="text" spellcheck="false" placeholder="1"  value="1">
-                <input class="sheet-header-middle-input-class" name="attr_character_class" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-middle-input" name="attr_character_antecedent" type="text" spellcheck="false" placeholder=""  value="">                
                 <input class="sheet-header-middle-input" name="attr_character_legacy" type="text" spellcheck="false" placeholder=""  value="">
                 <input class="sheet-header-middle-last-input" name="attr_character_heritage" type="text" spellcheck="false" placeholder=""  value="">
             </div>
             <div class="sheet-header-line-label">
-                <span>NÍVEL/CLASSE</span>
+                <span>ANTECEDENTE</span>                
                 <span>LEGADO</span>
                 <span class="sheet-header-line-last-label">HERANÇA</span>
             </div>
-            <div class="sheet-header-line-inputs">
-                <input class="sheet-header-middle-input" name="attr_character_antecedent" type="text" spellcheck="false" placeholder=""  value="">
+            <div class="sheet-header-line-inputs">                
                 <input class="sheet-header-middle-input" name="attr_character_curse" type="text" spellcheck="false" placeholder=""  value="">
-                <input class="sheet-header-middle-last-input" name="attr_character_player" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-trail-input" name="attr_character_trilha" type="text" spellcheck="false" placeholder=""  value="">                
+            </div>
+            <div class="sheet-header-line-label">                
+                <span>MALDIÇÃO</span>
+                <span>TRILHA</span>
+            </div>
+            <div class="sheet-header-line-inputs">
+                <!-- 1st Class-->
+                <input class="sheet-header-middle-input-level" name="attr_character_level" type="text" spellcheck="false" placeholder="1"  value="1">
+                <input class="sheet-header-level-input-class" name="attr_character_class" type="text" spellcheck="false" placeholder=""  value="">
+                <!--2nd Class-->
+                <input class="sheet-header-middle-input-level" name="attr_character_second_level" type="text" spellcheck="false" placeholder="1"  value="0">
+                <input class="sheet-header-level-input-class" name="attr_character_second_class" type="text" spellcheck="false" placeholder=""  value="">
+                <!--3rd Class-->
+                <input class="sheet-header-middle-input-level" name="attr_character_third_level" type="text" spellcheck="false" placeholder="1"  value="0">
+                <input class="sheet-header-level-input-class" name="attr_character_third_class" type="text" spellcheck="false" placeholder=""  value="">
             </div>
             <div class="sheet-header-line-label">
-                <span>ANTECEDENTE</span>
-                <span>MALDIÇÃO</span>
-                <span class="sheet-header-line-last-label">JOGADORE</span>
-            </div>
-            <div class="sheet-header-line-inputs">
-                <input class="sheet-header-total-input" name="attr_character_trilha" type="text" spellcheck="false" placeholder=""  value="">
-            </div>
-            <div class="sheet-header-line-label-total">
-                <span>TRILHA</span>
+                <span>NÍVEL/CLASSE</span>
+                <span>NÍVEL/CLASSE</span>
+                <span>NÍVEL/CLASSE</span>                
             </div>            
         </div>
         <div class="sheet-header-right">
@@ -95,32 +109,32 @@
                 <div class="sheet-attribute-name">
                     <label>
                         <button type="action" name="act_setstrengthroll">
-                            <span class="sheet-attr-span-strength">FOR</span>
+                            <span class="sheet-attr-span-strength"><b>t</b>FOR</span>
                         </button>
                     </label>
                     <label>
                         <button type="action" name="act_setdexterityroll">
-                            <span class="sheet-attr-span-dexterity">DES</span>
+                            <span class="sheet-attr-span-dexterity"><b>t</b>DES</span>
                         </button>
                     </label>
                     <label>
                         <button type="action" name="act_setconstitutionroll">
-                            <span class="sheet-attr-span-constitution">CON</span>
+                            <span class="sheet-attr-span-constitution"><b>t</b>CON</span>
                         </button>
                     </label>
                     <label>
                         <button type="action" name="act_setintelligenceroll">
-                            <span class="sheet-attr-span-intelligence">INT</span>
+                            <span class="sheet-attr-span-intelligence"><b>t</b>INT</span>
                         </button>
                     </label>
                     <label>
                         <button type="action" name="act_setwisdomroll">
-                            <span class="sheet-attr-span-wisdom">SAB</span>
+                            <span class="sheet-attr-span-wisdom"><b>t</b>SAB</span>
                         </button>
                     </label>
                     <label class="sheet-attribute-name-last">
                         <button type="action" name="act_setcharismaroll">
-                            <span class="sheet-attr-span-charisma">CAR</span>
+                            <span class="sheet-attr-span-charisma"><b>t</b>CAR</span>
                         </button>
                     </label>
                 </div>
