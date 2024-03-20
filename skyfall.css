@@ -643,18 +643,40 @@
   width: 200px !important;
   margin-left: 21px;
   margin-top: 18px;
-  height: 173px;
+  height: 90%;
   padding-top: 5px;
 }
 
-.sheet-equipment .sheet-textbox-div input {
-  width: 145px !important;
+.sheet-equipment .sheet-equip-name {
+  width: 62%; 
+  margin-left: 3px;
+}
+
+.sheet-equip-type{
+  width: 35%;
+}
+
+.sheet-equipment .sheet-equip-vol, 
+.sheet-equipment .sheet-equip-frag {
+  width: 23%;
+}
+
+.sheet-equipment .sheet-equip-name::placeholder,
+.sheet-equipment .sheet-equip-vol::placeholder,
+.sheet-equipment .sheet-equip-frag::placeholder,
+.sheet-equipment .sheet-equip-rd::placeholder {
+  font-weight: bold;
 }
 
 .sheet-equipment .sheet-textbox-div textarea{
   width: 183px !important;
   height: 130px;
   margin: 3px;
+}
+
+.sheet-equipment .sheet-equip-rd {
+  margin-left: 3px;
+  width: 97%;
 }
 
 /* Navigation */
@@ -821,7 +843,13 @@
 
 .sheet-character-equipment {
     display: grid;
-    grid-template-columns: 70% 27.5%;
+    grid-template-columns: 100%;
+    column-gap: 2.5%;
+}
+
+.sheet-character-equipment .sheet-money-others{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
     column-gap: 2.5%;
 }
 
@@ -842,6 +870,11 @@
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"] .sheet-tipoacao {
     height: 30px !important;
 }
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]{
+  margin-bottom: 15px;
+}
+
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"] .itemcontrol,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"] .itemcontrol,
@@ -906,7 +939,7 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-buttonspell,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell{
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-buttonspell{
     background-color: transparent;
     font-family: 'dicefontd20';
     color: #0e0e0e;
@@ -920,38 +953,59 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-buttonspell:hover,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell:hover,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell:hover {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-buttonspell:hover {
     color: #242424
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-buttonspell:active,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell:active,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell:active {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-buttonspell:active {
     font-size: 18px
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox {
     width: 20px;
     height: 20px;
     border: 0;
     padding: 0;
     margin: 0;
-    position: absolute;
-    top: 10px;
-    right: -37px;
+    position: relative;
+    top: 6px;
+    right: -20px;
     opacity: 0;
     z-index: 2;
     cursor: pointer
 }
 
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal{
+  position: relative;
+  left:80px;
+  top: -30px;
+} 
+
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~.sheet-extra,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~.sheet-extra,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~.sheet-extra {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox:checked~.sheet-extra {
     display: grid;
     background-color: #c9d1d7;;
     padding: 5px;
+}
+
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal:checked+.sheet-extra-internal{
+    display: contents !important;
+    background-color: #c9d1d7;;
+    padding: 5px;
+} 
+
+.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label {
+  display: inline-block !important;
+}
+
+.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label + .sheet-hiddencheckbox-internal {
+  display: inline-block !important;
 }
 
 .sheet-odd{
@@ -965,19 +1019,22 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~span.sheet-hiddencheckboxcover,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~span.sheet-hiddencheckboxcover,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:checked~span.sheet-hiddencheckboxcover {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox:checked~span.sheet-hiddencheckboxcover,
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal:checked+span.sheet-hiddencheckboxcover-internal {
     color: #202020
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:hover~.sheet-hiddencheckboxcover,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:hover~.sheet-hiddencheckboxcover,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox:hover~.sheet-hiddencheckboxcover {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox:hover~.sheet-hiddencheckboxcover,
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal:hover~.sheet-hiddencheckboxcover-internal  {
     color: #252525
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell span.sheet-hiddencheckboxcover,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell span.sheet-hiddencheckboxcover,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell span.sheet-hiddencheckboxcover {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment span.sheet-hiddencheckboxcover,
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment span.sheet-hiddencheckboxcover-internal  {
     position: absolute;
     font-family: "Pictos";
     font-size: 20px;
@@ -992,9 +1049,40 @@
     z-index: 1
 }
 
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox {
+  position: relative;
+  top: -35px;
+  right: -269px;
+}
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal {
+  width: 22px !important;
+  height: 22px !important;
+  left: 160px;
+  display: inline-block;
+  z-index: 2;
+}
+
+.sheet-sigilo-label{
+  width: 80px;
+}
+
+.sheet-hidden-sigilo{
+  display: none;
+}
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment span.sheet-hiddencheckboxcover-internal{
+  position: relative;
+  top: -28px;
+  right: -160px;
+  width: 20px !important;
+  height: 22px !important;
+}
+
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra  {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra,
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal  {
     display: none;
     grid-column: 1/6;
     width: 100%;
@@ -1007,9 +1095,10 @@
     color: #535353
 }
 
+
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra span,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra span,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra span  {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra span  {
     height: 100%;
     align-items: center
 }
@@ -1018,8 +1107,8 @@
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra select,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra input,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra select,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra input,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra select  {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra input,
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra select  {
     width: 100%;
     background-color: transparent;
     font-size: 12px;
@@ -1030,20 +1119,20 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-cd,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-cd,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-cd  {
+ .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra .sheet-cd  {
     text-align: center;
     justify-content: center
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-singleline,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-singleline,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-singleline {
+ .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-equipment .sheet-extra .sheet-singleline {
     grid-column: 2/5
 }
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-fullline,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-fullline,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-fullline  {
+ .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-equipment .sheet-extra .sheet-fullline  {
     grid-column: 1/5;
     display: inline-flex;
     justify-content: center;
@@ -1053,7 +1142,7 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra textarea,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra textarea,
- .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra textarea {
+ .sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-equipment .sheet-extra textarea {
     font-size: 12px;
     grid-column: 1/3;
     width: 95%;

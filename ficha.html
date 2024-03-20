@@ -733,7 +733,6 @@
                 <div class="sheet-textbox-div">
                     <div>
                         <button type="roll" name="roll_attack" value="&{template:characteristic} {{character_name=@{character_name}}} {{name=@{nomecharacteristics}}} {{description=@{descriptioncharacteristics}}}">
-                            <span>NOME:</span>
                         </button>
                         <input name="attr_nomecharacteristics" type="text" spellcheck="false" class="" value="">
                     </div>
@@ -744,17 +743,6 @@
                 
     </div>
     <div class="sheet-character-equipment">
-        <div class="sheet-equipment">
-            <fieldset class="repeating_equipment">                                    
-                <div class="sheet-textbox-div">
-                    <div>
-                        <span>NOME:</span>
-                        <input name="attr_nomeequipamento" type="text" spellcheck="false" class="" value="">
-                    </div>
-                    <textarea name="attr_descriptionequipamento"></textarea>
-                </div>
-            </fieldset>
-        </div>
         <div class="sheet-money-others">
             <div class="sheet-money">
                 <div>
@@ -767,13 +755,13 @@
                     <span>K$</span><input name="attr_kilo" type="text" spellcheck="false">
                 </div>
             </div>
-            <!--<div class="sheet-number-slots">
+            <div class="sheet-number-slots">
                 <div>
                     <div>
-                        <span>CURRENT</span>
+                        <span>Atual</span>
                     </div>
                     <div>
-                        <span>MAXIMO</span>
+                        <span>Limite</span>
                     </div>
                 </div>
                 <div>
@@ -785,16 +773,100 @@
                     </div>
                 </div>
                 <div>
-                    <span>INVENTORY SLOTS</span>
+                    <span>Inventário</span>
                 </div>
-            </div>
-            <div class="sheet-other-items">
-
             </div>
             <div class="sheet-magic-volumes">
-                
-            </div>-->
+                <div>
+                    <div>
+                        <span>Atual</span>
+                    </div>
+                    <div>
+                        <span>Limite</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input>
+                    </div>
+                    <div>
+                        <input>
+                    </div>
+                </div>
+                <div>
+                    <span>Fragmentos Arcanos</span>
+                </div>
+            </div>
         </div>
+        <div class="sheet-equipment">
+            <fieldset class="repeating_equipment">                                    
+                <div class="sheet-container-equipment">
+                    <div>
+                        <input name="attr_nomeequipamento" type="text" spellcheck="false" class="sheet-equip-name" value="" placeholder="NOME">
+                        <select name="attr_tipoequipamento" class="sheet-equip-type">
+                            <option>-</option>
+                            <option>Arma</option>
+                            <option>Armadura</option>
+                            <option>Escudo</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" class="sheet-hiddencheckbox">
+                    <span class="sheet-hiddencheckboxcover" style="right: -27px;">y</span>
+                    <div class="sheet-extra">
+                        <div>
+                            <input name="attr_volumeequipamento" type="text" spellcheck="false" class="sheet-equip-vol" value="" placeholder="VOL">
+                            <input name="attr_fragmentoequipamento" type="text" spellcheck="false" class="sheet-equip-frag" value="" placeholder="FRAG"> 
+                            <input name="attr_reducaoequipamento" type="text" spellcheck="false" class="sheet-equip-rd" value="" placeholder="REDUÇÃO DE DANO">
+                        </div>
+                        <div>
+                            <textarea name="attr_descriptionequipamento"></textarea>
+                        </div> 
+                        <!--1 Sigílo-->                             
+                        <label class="sheet-sigilo-label">Sigílo</label>                  
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                        <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                        <div class="sheet-extra-internal">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
+                                <textarea name="attr_descritorsigilo"></textarea>
+                                <textarea name="attr_efeitosigilo"></textarea>
+                                <textarea name="attr_imbuindofragmento"></textarea>
+                        </div>
+                         <!--2 Sigílo--> 
+                         <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
+                         <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                         <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                         <div class="sheet-extra-internal">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
+                                <textarea name="attr_descritorsigilo"></textarea>
+                                <textarea name="attr_efeitosigilo"></textarea>
+                                <textarea name="attr_imbuindofragmento"></textarea>
+                         </div>
+                        <!--3 Sigílo-->                            
+                        <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                        <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                        <div class="sheet-extra-internal">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
+                                <textarea name="attr_descritorsigilo"></textarea>
+                                <textarea name="attr_efeitosigilo"></textarea>
+                                <textarea name="attr_imbuindofragmento"></textarea>
+                        </div>
+                         <!--4 Sigílo-->
+                        <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                        <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                        <div class="sheet-extra-internal">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
+                                <textarea name="attr_descritorsigilo"></textarea>
+                                <textarea name="attr_efeitosigilo"></textarea>
+                                <textarea name="attr_imbuindofragmento"></textarea>
+                        </div>
+                    </div>
+                    
+                </div>
+            </fieldset>
+        </div>
+        
     </div>
     <div class="sheet-character-actions">
         <div class="sheet-actions">
@@ -942,13 +1014,14 @@
 
 <script type="text/worker">
     let calc_proficiency = function() {
-        getAttrs(["character_level","proficient_bonus"], function(v){
+        getAttrs(["character_level", "character_second_level", "character_third_level", "proficient_bonus"], function(v){
             let proficiency = 2;
+            let total_level = parseInt(v.character_level) + parseInt(v.character_second_level) + parseInt(v.character_third_level);
 
-            if(v.character_level > 4){
+            if(total_level > 4){
                 proficiency = +3;
             }
-            if(v.character_level > 8){
+            if(total_level > 8){
                 proficiency = +4;
             }
 
@@ -1091,7 +1164,7 @@
         calc_protection();
     });
     
-    on("change:character_level", function(e){
+    on(`change:character_level change:character_second_level change:character_third_level`, function(e){
         calc_proficiency();
     });  
 
