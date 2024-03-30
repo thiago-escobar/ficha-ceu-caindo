@@ -1062,18 +1062,19 @@
     padding: 5px;
 }
 
-
+.sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox-internal:checked+.sheet-extra-internal,
+.sheet-character-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-hiddencheckbox-internal:checked+.sheet-extra-internal,
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal:checked+.sheet-extra-internal{
     display: contents !important;
     background-color: #c9d1d7;;
     padding: 5px;
 } 
 
-.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label {
+.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label{
   display: inline-block !important;
 }
 
-.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label + .sheet-hiddencheckbox-internal {
+.sheet-hiddencheckbox-internal:checked + .sheet-extra-internal + .sheet-sigilo-label + .sheet-hiddencheckbox-internal{
   display: inline-block !important;
 }
 
@@ -1150,6 +1151,8 @@
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra,
+ .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-extra-internal,
+ .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra .sheet-extra-internal,
  .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra,
  .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal  {
     display: none;
@@ -1177,6 +1180,8 @@
   border: 2px solid black;
 }
 
+.sheet-equipment .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra-internal textarea,
+.sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra-internal textarea,
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal textarea{
   height:20px;
   width: 220px;
