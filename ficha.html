@@ -155,12 +155,19 @@
                     <input class="sheet-attribute-save-check sheet-attribute-save-last-check" type="checkbox" id="attr_save_charisma_check" name="attr_save_charisma_check" value="1" spellcheck="false"/>
                 </div>
                 <div class="sheet-attribute-save-values">
-                    <input class="sheet-attribute-save-value" name="attr_save_strength_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                    <input class="sheet-attribute-save-value" name="attr_save_dexterity_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                    <input class="sheet-attribute-save-value" name="attr_save_constitution_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                    <input class="sheet-attribute-save-value" name="attr_save_intelligence_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                    <input class="sheet-attribute-save-value" name="attr_save_wisdom_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
-                    <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_strength_show" type="text" spellcheck="false" placeholder=""  value="@{save_strength_value}" type="number" disabled="true">
+                    <input class="sheet-attribute-save-value" name="attr_save_dexterity_show" type="text" spellcheck="false" placeholder=""  value="@{save_dexterity_value}" type="number" disabled="true">
+                    <input class="sheet-attribute-save-value" name="attr_save_constitution_show" type="text" spellcheck="false" placeholder=""  value="@{save_constitution_value}" type="number" disabled="true">
+                    <input class="sheet-attribute-save-value" name="attr_save_intelligence_show" type="text" spellcheck="false" placeholder=""  value="@{save_intelligence_value}" type="number" disabled="true">
+                    <input class="sheet-attribute-save-value" name="attr_save_wisdom_show" type="text" spellcheck="false" placeholder=""  value="@{save_wisdom_value}" type="number" disabled="true">
+                    <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_show" type="text" spellcheck="false" placeholder=""  value="@{save_charisma_value}" type="number" disabled="true">
+
+                    <input name="attr_save_strength_value" type="hidden">
+                    <input name="attr_save_dexterity_value" type="hidden">
+                    <input name="attr_save_constitution_value" type="hidden">
+                    <input name="attr_save_intelligence_value" type="hidden">
+                    <input name="attr_save_wisdom_value" type="hidden">
+                    <input name="attr_save_charisma_value" type="hidden">
                 </div>
             </div>
         </div>
@@ -184,7 +191,8 @@
                 <div class="sheet-skills-and-languages">
                     <div class="sheet-skills">
                         <div class="sheet-skills-header">
-                            <input class="sheet-header-middle-input sheet-proficiency" name="attr_proficient_bonus" type="text" spellcheck="false" placeholder=""  value="">
+                            <input class="sheet-header-middle-input sheet-proficiency" name="attr_proficient_show" type="text" spellcheck="false" disabled="true" placeholder=""  value="@{proficient_bonus}">
+                            <input name="attr_proficient_bonus" type="hidden" value="0">
                             <span>BÔNUS DE PROFICIÊNCIA</span>
                         </div>
                         <div class="sheet-skills-body">
@@ -478,7 +486,8 @@
                         </div>
                         <div>
                             <span>REDUÇÃO DE DANO</span>
-                            <input type="text" name="attr_reducaodedano" class="sheet-big-box">
+                            <input type="text" name="attr_reducaodedano_show" value="@{reducaodedano}" class="sheet-big-box" disabled="true">
+                            <input type="hidden" name="attr_reducaodedano" value="0">
                         </div>
                         <div>
                             <div>
@@ -743,58 +752,54 @@
                 
     </div>
     <div class="sheet-character-equipment">
-        <div class="sheet-money-others">
-            <div class="sheet-money">
-                <div>
-                    <span>T$</span><input name="attr_trocado" type="text" spellcheck="false">
-                </div>
-                <div>
-                    <span>P$</span><input name="attr_pila" type="text" spellcheck="false">
-                </div>
-                <div>
-                    <span>K$</span><input name="attr_kilo" type="text" spellcheck="false">
-                </div>
-            </div>
+        <div class="sheet-money-others">            
             <div class="sheet-number-slots">
-                <div>
+                <div class="sheet-slots-header">
+                    <span>Volume de Carga</span>
+                </div>
+                <div class="sheet-slots">
                     <div>
+                        <input name="attr_volumeatual_show" type="number" value="@{volumeatual}" disabled="true">
+                        <input name="attr_volumeatual" type="hidden" value="0">
                         <span>Atual</span>
                     </div>
                     <div>
+                        <input name="attr_volumeextra" type="number" value="0" >
+                        <span>Extra</span>
+                    </div>
+                    <div style="border:none;">
+                        <input name="attr_volumelimite_show" type="number" value="@{volumelimite}+@{volumeextra}" disabled="true">
+                        <input name="attr_volumelimite" type="hidden">
                         <span>Limite</span>
                     </div>
-                </div>
-                <div>
-                    <div>
-                        <input>
-                    </div>
-                    <div>
-                        <input>
-                    </div>
-                </div>
-                <div>
-                    <span>Inventário</span>
-                </div>
+                </div>               
             </div>
             <div class="sheet-magic-volumes">
-                <div>
+                <div class="sheet-fragment-header">
+                    <span>Fragmentos Arcanos</span>
+                </div>
+                <div class="sheet-fragments">
                     <div>
+                        <input name="attr_fragmentosatual_show" type="number" disabled="true" value="@{fragmentosatual}">
+                        <input name="attr_fragmentosatual" type="hidden" value="0">
                         <span>Atual</span>
                     </div>
-                    <div>
+                    <div style="border:none">
+                        <input name="attr_fragmentolimite_show" type="number" disabled="true" value="@{character_charisma} + (@{proficient_bonus} * 2)">
+                        <input name="attr_fragmentolimite" type="hidden">
                         <span>Limite</span>
                     </div>
+                </div>                
+            </div>
+            <div class="sheet-money">
+                <div>
+                    <input name="attr_trocado" type="text" spellcheck="false"> <span>Trocado (T$)</span>
                 </div>
                 <div>
-                    <div>
-                        <input>
-                    </div>
-                    <div>
-                        <input>
-                    </div>
+                    <input name="attr_pila" type="text" spellcheck="false"> <span>Pilar (P$)</span>
                 </div>
                 <div>
-                    <span>Fragmentos Arcanos</span>
+                    <input name="attr_kilo" type="text" spellcheck="false"> <span>K's (K$)</span>
                 </div>
             </div>
         </div>
@@ -812,24 +817,24 @@
                     </div>
                     <input type="checkbox" class="sheet-hiddencheckbox">
                     <span class="sheet-hiddencheckboxcover" style="right: -27px;">y</span>
-                    <div class="sheet-extra">
-                        <div>
+                    <div class="sheet-extra" style="width: 235px;">
+                        <div class="sheet-small-boxes">
                             <input name="attr_volumeequipamento" type="text" spellcheck="false" class="sheet-equip-vol" value="" placeholder="VOL">
                             <input name="attr_fragmentoequipamento" type="text" spellcheck="false" class="sheet-equip-frag" value="" placeholder="FRAG"> 
-                            <input name="attr_reducaoequipamento" type="text" spellcheck="false" class="sheet-equip-rd" value="" placeholder="REDUÇÃO DE DANO">
+                            <input name="attr_reducaoequipamento" type="text" spellcheck="false" class="sheet-equip-rd" value="" placeholder="RD">
                         </div>
-                        <div>
-                            <textarea name="attr_descriptionequipamento"></textarea>
+                        <div class="sheet-text-box">
+                            <textarea name="attr_descriptionequipamento" placeholder="DESCRIÇÃO"></textarea>
                         </div> 
                         <!--1 Sigílo-->                             
                         <label class="sheet-sigilo-label">Sigílo</label>                  
                         <input type="checkbox" class="sheet-hiddencheckbox-internal">
                         <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
                         <div class="sheet-extra-internal">
-                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
-                                <textarea name="attr_descritorsigilo"></textarea>
-                                <textarea name="attr_efeitosigilo"></textarea>
-                                <textarea name="attr_imbuindofragmento"></textarea>
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd" placeholder="Nome">
+                                <textarea name="attr_descritorsigilo" placeholder="Descritores"></textarea>
+                                <textarea name="attr_efeitosigilo" placeholder="Efeito"></textarea>
+                                <textarea name="attr_imbuindofragmento" placeholder="Imbuindo fragmento"></textarea>
                         </div>
                          <!--2 Sigílo--> 
                          <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
@@ -917,10 +922,98 @@
                         <div class="sheet-odd"><span>Efeito:</span> <textarea class="sheet-effect-textarea" name="attr_efeito_actions" type="text" spellcheck="false" value=""></textarea></div>
                         <div class="sheet-odd"><span>Especial:</span> <textarea name="attr_especial_actions" type="text" spellcheck="false" value=""></textarea></div>
                         <div class="sheet-even">
-                            <span>Modificações:</span><br>
-                            <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
-                            <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
-                            <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            <!--1 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--2 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--3 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--4 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--5 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--6 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--7 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--8 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--9 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            <!--10 Modificação-->                             
+                            <span>Modificação:</span><br>              
+                            <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                            <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
+                            <div class="sheet-extra-internal">
+                                <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
+                                <span>Tipo de Modificação</span> <input name="attr_tipomod_actions" type="text" spellcheck="false" value="">
+                                <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
+                            </div>
+                            
+                            
                         </div>                        
                     </div>
                 </div>
@@ -1016,7 +1109,7 @@
     let calc_proficiency = function() {
         getAttrs(["character_level", "character_second_level", "character_third_level", "proficient_bonus"], function(v){
             let proficiency = 2;
-            let total_level = parseInt(v.character_level) + parseInt(v.character_second_level) + parseInt(v.character_third_level);
+            let total_level = convert_to_int(v.character_level) + convert_to_int(v.character_second_level) + convert_to_int(v.character_third_level);
 
             if(total_level > 4){
                 proficiency = +3;
@@ -1059,6 +1152,20 @@
         });
     }
 
+    let calculate_load = function(){
+        getAttrs(["character_strength"], function(v){
+            let base_volume = 10;
+
+            if(v.character_strength > 0){
+                base_volume += (convert_to_int(v.character_strength) * 3);
+            } else {
+                base_volume += (convert_to_int(v.character_strength) * 2);
+            }
+
+            setAttrs({["volumelimite"]: base_volume });
+        });
+    }
+
     let setattribute_roll = function(attribute){
         getAttrs(["selectedattribute", "character_name", "selectedrawvalue", `character_${attribute}`], function(v){
             if(v.selectedattribute != `character_${attribute}`){
@@ -1094,6 +1201,34 @@
             }
         }); 
     }
+
+    on('sheet:opened change:repeating_equipment:volumeequipamento change:repeating_equipment:fragmentoequipamento change:repeating_equipment:reducaoequipamento', function(e){
+        getSectionIDs("equipment", function(idarray) {
+            let volume = 0;
+            let fragmento = 0;
+            let rd = 0;
+            
+            for(var i=0; i < idarray.length; i++) {
+                let repeeating_volume = "repeating_equipment_" + idarray[i] + "_volumeequipamento";
+                let repeeating_fragme = "repeating_equipment_" + idarray[i] + "_fragmentoequipamento";
+                let repeeating_redano = "repeating_equipment_" + idarray[i] + "_reducaoequipamento";
+
+                getAttrs([repeeating_volume, repeeating_fragme, repeeating_redano], function(v){
+                    console.log(v[repeeating_volume], v[repeeating_fragme], v[repeeating_redano]);
+
+                    volume += convert_to_int(v[repeeating_volume]);
+                    fragmento += convert_to_int(v[repeeating_fragme]);
+                    rd += convert_to_int(v[repeeating_redano]);
+
+                    console.log(volume, fragmento, rd);
+
+                    setAttrs({["volumeatual"]: volume});
+                    setAttrs({["fragmentosatual"]: fragmento});
+                    setAttrs({["reducaodedano"]: rd});
+                });
+            }            
+        });
+    });
 
     on("clicked:skillroll", function(e){
         console.log(e);
@@ -1152,10 +1287,12 @@
         on(`clicked:set${attr}roll`, function(){
             setattribute_roll(attr);
             update_attacks(`${attr}`);
+            calculate_load();
         });
 
         on(`change:character_${attr}`, function() {
-            update_attacks(`${attr}`);            
+            update_attacks(`${attr}`);  
+            calculate_load();          
         });
     });
 
@@ -1341,10 +1478,10 @@
                 if (!v[`${repeating_attacks}_atkattr_base`] || v[`${repeating_attacks}_atkattr_base`] === "0") {
                     atkattr_base = 0
                 } else if (v[`${repeating_attacks}_atkattr_base`] && v[`${repeating_attacks}_atkattr_base`] === "spell") {
-                    atkattr_base  = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    atkattr_base  = convert_to_int(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
                     atkattr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
-                    atkattr_base = parseInt(v[v[`${repeating_attacks}_atkattr_base`].substring(2, v[`${repeating_attacks}_atkattr_base`].length - 1)], 10);
+                    atkattr_base = convert_to_int(v[v[`${repeating_attacks}_atkattr_base`].substring(2, v[`${repeating_attacks}_atkattr_base`].length - 1)], 10);
                     atkattr_abrev = v[`${repeating_attacks}_atkattr_base`].substring(2, 5).toUpperCase();
                 };
 
@@ -1354,10 +1491,10 @@
                 if (!v[`${repeating_attacks}_dmgattr`] || v[`${repeating_attacks}_dmgattr`] === "0") {
                     dmgattr = 0;
                 } else if (v[`${repeating_attacks}_dmgattr`] && v[`${repeating_attacks}_dmgattr`] === "spell") {
-                    dmgattr = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    dmgattr = convert_to_int(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
                     dmgattr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
-                    dmgattr = parseInt(v[v[`${repeating_attacks}_dmgattr`].substring(2, v[`${repeating_attacks}_dmgattr`].length - 1)], 10);
+                    dmgattr = convert_to_int(v[v[`${repeating_attacks}_dmgattr`].substring(2, v[`${repeating_attacks}_dmgattr`].length - 1)], 10);
                     dmgattr_abrev = v[`${repeating_attacks}_dmgattr`].substring(2, 5).toUpperCase();
                 };
     
@@ -1365,10 +1502,10 @@
                 if (!v[`${repeating_attacks}_dmg2attr`] || v[`${repeating_attacks}_dmg2attr`] === "0") {
                     dmg2attr = 0;
                 } else if (v[`${repeating_attacks}_dmg2attr`] && v[`${repeating_attacks}_dmg2attr`] === "spell") {
-                    dmg2attr = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    dmg2attr = convert_to_int(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
                     dmg2attr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
-                    dmg2attr = parseInt(v[v[`${repeating_attacks}_dmg2attr`].substring(2, v[`${repeating_attacks}_dmg2attr`].length - 1)], 10);
+                    dmg2attr = convert_to_int(v[v[`${repeating_attacks}_dmg2attr`].substring(2, v[`${repeating_attacks}_dmg2attr`].length - 1)], 10);
                     dmg2attr_abrev =v[`${repeating_attacks}_dmg2attr`].substring(2, 5).toUpperCase();
                 };
     
@@ -1376,9 +1513,9 @@
                 const dmgbase  = v[`${repeating_attacks}_dmgbase`] || 0;
                 const dmg2base = v[`${repeating_attacks}_dmg2base`] || 0;
                 //DAMAGE 1 second input inside settings for the repeating attack
-                const dmgmod  = parseInt(v[`${repeating_attacks}_dmgmod`],10) || 0;
+                const dmgmod  = convert_to_int(v[`${repeating_attacks}_dmgmod`],10) || 0;
                 //DAMAGE 2 second input inside settings for the repeating attack
-                const dmg2mod = parseInt(v[`${repeating_attacks}_dmg2mod`],10) || 0;
+                const dmg2mod = convert_to_int(v[`${repeating_attacks}_dmg2mod`],10) || 0;
                 //DAMAGE 1 TYPE input inside settings for the repeating attack
                 const dmgtype  = v[`${repeating_attacks}_dmgtype`] || "";
                 //DAMAGE 2 TYPE input inside settings for the repeating attack
@@ -1389,9 +1526,9 @@
                 const proficient_bonus = (atkprofflag != 0 && v.proficient_bonus) ? v.proficient_bonus : 0;
     
                 //ATTACK input inside settings for the repeating attack
-                const atkmod = parseInt(v[`${repeating_attacks}_atkmod`],10) || 0;
+                const atkmod = convert_to_int(v[`${repeating_attacks}_atkmod`],10) || 0;
                 //MAGIC BONUS input inside settings for the repeating attack
-                const atkmag = parseInt(v[`${repeating_attacks}_atkmagic`],10) || 0;
+                const atkmag = convert_to_int(v[`${repeating_attacks}_atkmagic`],10) || 0;
     
                 //used in _atkdmgtype display
                 const dmgmag = (isNaN(atkmag) === false && atkmag != 0 && ((v[`${repeating_attacks}_dmgflag`] && v[`${repeating_attacks}_dmgflag`] != 0) || (v[`${repeating_attacks}_dmg2flag`] && v[`${repeating_attacks}_dmg2flag`] != 0))) ? `+ ${atkmag} Magic Bonus` : "";
@@ -1406,7 +1543,7 @@
                     if (v["pb_type"] && v["pb_type"] === "die") {
                         bonus  = `${bonus_mod}+${proficient_bonus}`;
                     } else {
-                        bonus_mod  = bonus_mod + parseInt(proficient_bonus, 10);
+                        bonus_mod  = bonus_mod + convert_to_int(proficient_bonus, 10);
                         bonus      = plus_minus + bonus_mod;
                     };
                 //SAVING THROW checkbox inside settings for the repeating attack
@@ -1418,13 +1555,13 @@
                         bonus = "DC" + tempdc;
                     //SAVING THROW VS DC select "FLAT" inside settings for the repeating attack
                     } else if (saveDC === "(@{saveflat})") {
-                        const tempdc = parseInt(v[`${repeating_attacks}_saveflat`]) || 0;
+                        const tempdc = convert_to_int(v[`${repeating_attacks}_saveflat`]) || 0;
                         bonus = "DC" + tempdc;
                     //SAVING THROW VS DC select ability score inside settings for the repeating attack
                     } else {
                         const savedcattr = v[`${repeating_attacks}_savedc`].split("_mod")[0].slice(3);
-                        const safe_pb    = v["pb_type"] && v["pb_type"] === "die" ? parseInt(proficient_bonus.substring(1), 10) / 2 : parseInt(proficient_bonus,10);
-                        const safe_attr  = v[`${savedcattr}_mod`] ? parseInt(v[`${savedcattr}_mod`],10) : 0;
+                        const safe_pb    = v["pb_type"] && v["pb_type"] === "die" ? convert_to_int(proficient_bonus.substring(1), 10) / 2 : convert_to_int(proficient_bonus,10);
+                        const safe_attr  = v[`${savedcattr}_mod`] ? convert_to_int(v[`${savedcattr}_mod`],10) : 0;
                         const tempdc     = 8 + safe_attr + safe_pb + magicsavemod;
                         bonus = "DC" + tempdc;
                     };
@@ -1438,7 +1575,7 @@
                 if (dmgflag1 != 0) {
                     if (spellattack === true && dmgbase.indexOf("[[round((@{level} + 1) / 6 + 0.5)]]") > -1) {
                         // SPECIAL CANTRIP DAMAGE
-                        dmgdiestring = Math.round(((parseInt(v["level"], 10) + 1) / 6) + 0.5).toString();
+                        dmgdiestring = Math.round(((convert_to_int(v["level"], 10) + 1) / 6) + 0.5).toString();
                         dmg = dmgdiestring + dmgbase.substring(dmgbase.lastIndexOf("d"));
                         //select & input to the right of damage
                         if (dmgattr + dmgmod != 0) {

@@ -650,10 +650,16 @@
 .sheet-equipment .sheet-equip-name {
   width: 62%; 
   margin-left: 3px;
+  border: 2px solid #424f66;
+  font-family: 'Bree Serif', serif;
 }
 
 .sheet-equip-type{
   width: 35%;
+  border: 2px solid #424f66;
+  font-family: 'Bree Serif', serif;
+  height: 30px;
+  margin-bottom: 0px;  
 }
 
 .sheet-equipment .sheet-equip-vol, 
@@ -849,9 +855,66 @@
 
 .sheet-character-equipment .sheet-money-others{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 35% 35% 25%;
     column-gap: 2.5%;
 }
+
+.sheet-character-equipment .sheet-money-others .sheet-money{
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #424f66;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-money input {
+  width: 100%;
+  border: 2px solid #424f66;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-number-slots,
+.sheet-character-equipment .sheet-money-others .sheet-magic-volumes{
+  text-align: center;
+  border: 2px solid #424f66;
+  background-color: white;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-number-slots .sheet-slots-header,
+.sheet-character-equipment .sheet-money-others .sheet-magic-volumes .sheet-fragment-header {
+  border-bottom: 2px solid #424f66;
+  font-size: 20px;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-number-slots .sheet-slots{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 5%;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-magic-volumes .sheet-fragments{
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-column-gap: 5%;
+}
+
+
+.sheet-character-equipment .sheet-money-others .sheet-number-slots .sheet-slots input,
+.sheet-character-equipment .sheet-money-others .sheet-magic-volumes .sheet-fragments input{
+  width: 100%;
+  height: 100px;
+  border: none;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Bree Serif', serif;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.sheet-character-equipment .sheet-money-others .sheet-number-slots .sheet-slots div,
+.sheet-character-equipment .sheet-money-others .sheet-magic-volumes .sheet-fragments div{
+  border-right: 2px solid #424f66;
+}
+
+
 
 .sheet-actions .repcontainer[data-groupname="repeating_actions"],
 .sheet-spells .repcontainer[data-groupname="repeating_spells"],
@@ -936,6 +999,12 @@
   width: 240px !important;
 }
 
+.sheet-equipment .sheet-container-equipment{
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #424f66;
+  margin-bottom: 7px;
+}
 
  .sheet-actions .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-buttonspell,
  .sheet-spells .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-buttonspell,
@@ -1051,8 +1120,8 @@
 
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox {
   position: relative;
-  top: -35px;
-  right: -269px;
+  top: -36px;
+  right: -262px;
 }
 
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-hiddencheckbox-internal {
@@ -1093,6 +1162,26 @@
     column-gap: 4px;
     row-gap: 4px;
     color: #535353
+}
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra .sheet-small-boxes{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 5%;
+}
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra .sheet-text-box textarea{
+  width: 220px;
+  height: 40px;
+  border: none;
+  border: 2px solid black;
+}
+
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal textarea{
+  height:20px;
+  width: 220px;
+  border: none;
+  border: 2px solid black;
 }
 
 
