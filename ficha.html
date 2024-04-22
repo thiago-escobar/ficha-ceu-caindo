@@ -828,43 +828,43 @@
                         </div> 
                         <!--1 Sigílo-->                             
                         <label class="sheet-sigilo-label">Sigílo</label>                  
-                        <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal" name="attr_sigilocheckum">
                         <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
                         <div class="sheet-extra-internal">
                                 <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd" placeholder="Nome">
-                                <textarea name="attr_descritorsigilo" placeholder="Descritores"></textarea>
-                                <textarea name="attr_efeitosigilo" placeholder="Efeito"></textarea>
-                                <textarea name="attr_imbuindofragmento" placeholder="Imbuindo fragmento"></textarea>
+                                <textarea name="attr_descritorsigiloum" placeholder="Descritores"></textarea>
+                                <textarea name="attr_efeitosigiloum" placeholder="Efeito"></textarea>
+                                <textarea name="attr_imbuindofragmentoum" placeholder="Imbuindo fragmento"></textarea>
                         </div>
                          <!--2 Sigílo--> 
-                         <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
-                         <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                         <label class="sheet-sigilo-label-two" style="display: none;">Sigílo</label>                  
+                         <input type="checkbox" class="sheet-hiddencheckbox-internal-two" style="display: none;" name="attr_sigilocheckdois">
                          <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                         <div class="sheet-extra-internal">
-                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
-                                <textarea name="attr_descritorsigilo"></textarea>
-                                <textarea name="attr_efeitosigilo"></textarea>
-                                <textarea name="attr_imbuindofragmento"></textarea>
+                         <div class="sheet-extra-internal-two">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd" placeholder="Nome">
+                                <textarea name="attr_descritorsigilodois"  placeholder="Descritores"></textarea>
+                                <textarea name="attr_efeitosigilodois" placeholder="Efeito"></textarea>
+                                <textarea name="attr_imbuindofragmentodois" placeholder="Imbuindo fragmento"></textarea>
                          </div>
                         <!--3 Sigílo-->                            
-                        <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
-                        <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                        <label class="sheet-sigilo-label-three" style="display: none;">Sigílo</label>                  
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal-three" style="display: none;"  name="attr_sigilochecktres">
                         <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                        <div class="sheet-extra-internal">
-                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
-                                <textarea name="attr_descritorsigilo"></textarea>
-                                <textarea name="attr_efeitosigilo"></textarea>
-                                <textarea name="attr_imbuindofragmento"></textarea>
+                        <div class="sheet-extra-internal-three">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd" placeholder="Nome">
+                                <textarea name="attr_descritorsigilotres" placeholder="Descritores"></textarea>
+                                <textarea name="attr_efeitosigilotres" placeholder="Efeito"></textarea>
+                                <textarea name="attr_imbuindofragmentotres" placeholder="Imbuindo fragmento"></textarea>
                         </div>
                          <!--4 Sigílo-->
-                        <label class="sheet-sigilo-label" style="display: none;">Sigílo</label>                  
-                        <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                        <label class="sheet-sigilo-label-four" style="display: none;">Sigílo</label>                  
+                        <input type="checkbox" class="sheet-hiddencheckbox-internal-four" style="display: none;"  name="attr_sigilocheckquatro">
                         <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                        <div class="sheet-extra-internal">
-                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd">
-                                <textarea name="attr_descritorsigilo"></textarea>
-                                <textarea name="attr_efeitosigilo"></textarea>
-                                <textarea name="attr_imbuindofragmento"></textarea>
+                        <div class="sheet-extra-internal-four">
+                                <input name="attr_sigilo" type="text" spellcheck="false" class="sheet-equip-rd" placeholder="Nome">
+                                <textarea name="attr_descritorsigiloquatro" placeholder="Descritores"></textarea>
+                                <textarea name="attr_efeitosigiloquatro" placeholder="Efeito"></textarea>
+                                <textarea name="attr_imbuindofragmentoquatro" placeholder="Imbuindo fragmento"></textarea>
                         </div>
                     </div>
                     
@@ -877,31 +877,43 @@
         <div class="sheet-actions">
             <fieldset class="repeating_actions">                                    
                 <div class="sheet-container-single-spell">
-                    <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{especial_actions=@{especial_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
-                    <select class="sheet-tipoacao" name="attr_tipoacao">
-                        <option value="Ação">Ação</option>
-                        <option value="Bônus">Bônus</option>
-                        <option value="Livre">Livre</option>
-                        <option value="Passiva">Passiva</option>
-                        <option value="Reção">Reação</option>
-                    </select>
-                    <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value="" placeholder="Nome do Poder"/>
-                    <select class="sheet-custoacao" name="attr_custoacao">
-                        <option value="-" selected>-</option>
-                        <option value="rep">Rep</option>
-                        <option value="1pe">1 PE</option>
-                        <option value="2pe">2 PE</option>
-                        <option value="3pe">3 PE</option>
-                        <option value="4pe">4 PE</option>
-                        <option value="5pe">5 PE</option>
-                    </select>
+                    <div class="sheet-style-acao">
+                        <input type="hidden" class="sheet-tipoacaoshow" name="attr_tipoacaoshow" value="" >
+                        <img class="sheet-img-acao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/acao.svg"/>
+                        <img class="sheet-img-bonus" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/bonus.svg"/>
+                        <img class="sheet-img-livre" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/1b8f412973cf0296d09e189b0c18752ac377bfc5/Skyfall/imgs/livre.svg"/>
+                        <img class="sheet-img-passiva" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/1b8f412973cf0296d09e189b0c18752ac377bfc5/Skyfall/imgs/passiva.svg"/>
+                        <img class="sheet-img-reacao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/reacao.svg"/>
+                    </div>
+                    <button type="roll" name="roll_spell1" class="buttonspell" 
+                        value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{especial_actions=@{especial_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}">
+                        <span class="sheet-name-action" name="attr_nameactionshow" value="@{nameaction}"></span>
+                    </button>
+                    <span name="attr_custoacaoshow" value="@{custoacao}" class="sheet-custo-header"></span>
                     <input type="checkbox" class="sheet-hiddencheckbox">
                     <span class="sheet-hiddencheckboxcover">y</span>
                     
                     <div class="sheet-extra">
+                        <select class="sheet-tipoacao" name="attr_tipoacao">
+                            <option value="Acao">Ação</option>
+                            <option value="Bonus">Bônus</option>
+                            <option value="Livre">Livre</option>
+                            <option value="Passiva">Passiva</option>
+                            <option value="Reacao">Reação</option>
+                        </select>
+                        <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value="" placeholder="Nome do Poder"/>
+                        <select class="sheet-custoacao" name="attr_custoacao">
+                            <option value="-" selected>-</option>
+                            <option value="rep">Rep</option>
+                            <option value="1pe">1 PE</option>
+                            <option value="2pe">2 PE</option>
+                            <option value="3pe">3 PE</option>
+                            <option value="4pe">4 PE</option>
+                            <option value="5pe">5 PE</option>
+                        </select>
                         <div class="sheet-even">
                             <span>Informações</span>
-                            <input type="text" name="attr_info_actions">
+                            <input type="text" name="attr_info_actions" spellcheck="false" value="">
                         </div>
                         <div class="sheet-odd">
                             <span>Descritores:</span>
@@ -924,7 +936,7 @@
                         <div class="sheet-even">
                              <!--1 Modificação-->                             
                              <label class="sheet-sigilo-label">Modificação:</label>              
-                             <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <input type="checkbox" class="sheet-hiddencheckbox-internal" name="attr_modcheckone" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
                              <div class="sheet-extra-internal">
                                  <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -932,88 +944,144 @@
                                  <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
                              </div>
                              <!--2 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>            
-                             <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                             <label class="sheet-sigilo-label-two" style="display: none;">Modificação:</label>            
+                             <input type="checkbox" class="sheet-hiddencheckbox-internal-two" style="display: none;" name="attr_modchecktwo" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-two">
                                  <span>Custo da Modificação</span> <input name="attr_customodtwo_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodtwo_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptiontwo_actions"></textarea>
                              </div>
                              <!--3 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>            
-                             <input type="checkbox" class="sheet-hiddencheckbox-internal" style="display: none;">
+                             <label class="sheet-sigilo-label-three" style="display: none;">Modificação:</label>            
+                             <input type="checkbox" class="sheet-hiddencheckbox-internal-three" style="display: none;" name="attr_modcheckthree" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-three">
                                  <span>Custo da Modificação</span> <input name="attr_customodthree_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodthree_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionthree_actions"></textarea>
                              </div>
                              <!--4 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>            
-                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-four" style="display: none;">Modificação:</label>            
+                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-four" name="attr_modcheckfour" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-four">
                                  <span>Custo da Modificação</span> <input name="attr_customodfour_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodfour_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionfour_actions"></textarea>
                              </div>
                              <!--5 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>          
-                             <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-five" style="display: none;">Modificação:</label>          
+                             <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal-five" name="attr_modcheckfive" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-five">
                                  <span>Custo da Modificação</span> <input name="attr_customodfive_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodfive_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionfive_actions"></textarea>
                              </div>
                              <!--6 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>             
-                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-six" style="display: none;">Modificação:</label>             
+                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-six" name="attr_modchecksix" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-six">
                                  <span>Custo da Modificação</span> <input name="attr_customodsix_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodsix_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionsix_actions"></textarea>
                              </div>
                              <!--7 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>            
-                             <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-seven" style="display: none;">Modificação:</label>            
+                             <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal-seven" name="attr_modcheckseven" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-seven">
                                  <span>Custo da Modificação</span> <input name="attr_customodseven_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodseven_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionseven_actions"></textarea>
                              </div>
                              <!--8 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>              
-                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-eigth" style="display: none;">Modificação:</label>              
+                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-eigth" name="attr_modcheckeigth" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
-                                 <span>Custo da Modificação</span> <input name="attr_customodeight_actions" type="text" spellcheck="false" value="">
-                                 <span>Tipo de Modificação</span> <input name="attr_tipomodeight_actions" type="text" spellcheck="false" value="">
-                                 <textarea class="sheet-modificator-textarea" name="attr_descriptioneight_actions"></textarea>
+                             <div class="sheet-extra-internal-eigth">
+                                 <span>Custo da Modificação</span> <input name="attr_customodeigth_actions" type="text" spellcheck="false" value="">
+                                 <span>Tipo de Modificação</span> <input name="attr_tipomodeigth_actions" type="text" spellcheck="false" value="">
+                                 <textarea class="sheet-modificator-textarea" name="attr_descriptioneigth_actions"></textarea>
                              </div>
                              <!--9 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>           
-                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-nine" style="display: none;">Modificação:</label>           
+                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-nine" name="attr_modchecknine" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-nine">
                                  <span>Custo da Modificação</span> <input name="attr_customodnine_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodnine_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionnine_actions"></textarea>
                              </div>
                              <!--10 Modificação-->                             
-                             <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                             <label class="sheet-sigilo-label-ten" style="display: none;">Modificação:</label>
+                             <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-ten" name="attr_modcheckten" value="1">
                              <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                             <div class="sheet-extra-internal">
+                             <div class="sheet-extra-internal-ten">
                                  <span>Custo da Modificação</span> <input name="attr_customodten_actions" type="text" spellcheck="false" value="">
                                  <span>Tipo de Modificação</span> <input name="attr_tipomodten_actions" type="text" spellcheck="false" value="">
                                  <textarea class="sheet-modificator-textarea" name="attr_descriptionten_actions"></textarea>
                              </div>
                         </div>                        
                     </div>
+
+                    <div class="sheet-extra-body">
+                        <div class="sheet-extra-div" style="background-color: #424f66; padding:3px;"><span name="attr_descritores_show" class="sheet-descriptor-show" ></span></div>
+                        <div class="sheet-extra-div"><span name="attr_informacoes_show"></span></div>                        
+                        
+                        <div class="sheet-extra-div"><label>Alcance: </label><span name="attr_alcance_show"  placeholder="descritores"></span></div>
+                        <div class="sheet-extra-div"><label>Alvo: </label><span name="attr_alvo_show" placeholder="descritores"></span></div>
+                        <div class="sheet-extra-div"><label>Duração: </label><span name="attr_duracao_show" placeholder="descritores"></span></div>
+                        <div class="sheet-extra-div"><label>Componentes: </label><span name="attr_component_show" placeholder="descritores"></span></div>
+                        <div class="sheet-extra-div"><label>Gatilho: </label><span name="attr_gatilho_show"></span></div>
+                        <div class="sheet-extra-div"><label>Ataque: </label><span name="attr_ataque_show"></span></div>
+                        <div class="sheet-extra-div"><label>Acerto: </label><span name="attr_acerto_show"></span></div>
+                        <div class="sheet-extra-div"><label>Erro: </label><span name="attr_erro_show"></span></div>
+                        <div class="sheet-extra-div"><label>Efeito: </label><span name="attr_efeito_show"></span></div>
+                        <div class="sheet-extra-div"><label>Especial: </label><span name="attr_especial_show"></span></div>
+                        <!--1 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customod_show"></span> <span name="attr_tipomod_show"></span> <span name="attr_description_show"></span>
+                        </div>                        
+                        <!--2 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodtwo_show"></span> <span name="attr_tipomodtwo_show"></span> <span name="attr_descriptiontwo_show"></span>
+                        </div>
+                        <!--3 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodthree_show"></span> <span name="attr_tipomodthree_show"></span> <span name="attr_descriptionthree_show"></span>
+                        </div>
+                        <!--4 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodfour_show"></span> <span name="attr_tipomodfour_show"></span> <span name="attr_descriptionfour_show"></span>
+                        </div>
+                        <!--5 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodfive_show"></span> <span name="attr_tipomodfive_show"></span> <span name="attr_descriptionfive_show"></span>
+                        </div>
+                        <!--6 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodsix_show"></span> <span name="attr_tipomodsix_show"></span> <span name="attr_descriptionsix_show"></span>
+                        </div>
+                        <!--7 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodseven_show" ></span> <span name="attr_tipomodseven_show"></span> <span name="attr_descriptionseven_show"></span>
+                        </div>
+                        <!--8 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodeigth_show"></span> <span name="attr_tipomodeigth_show"></span> <span name="attr_descriptioneigth_show"></span>
+                        </div>
+                        <!--9 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodnine_show"></span> <span name="attr_tipomodnine_show"></span> <span name="attr_descriptionnine_show"></span>
+                        </div>
+                        <!--10 Mod-->
+                        <div class="sheet-extra-div">
+                            <span name="attr_customodten_show"></span> <span name="attr_tipomodten_show"></span>  <span name="attr_descriptionten_show"></span></div>
+                    </div>
+
                 </div>
                 <input type="hidden" value="" name="attr_rollaction">
             </fieldset>
@@ -1041,28 +1109,39 @@
             <div class="sheet-spells-container">
                 <fieldset class="repeating_spells">
                     <div class="sheet-container-single-spell">
-                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{especial_actions=@{especial_actions}}}  {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
-                        <select class="sheet-tipoacao" name="attr_tipospells">
-                            <option value="Ação">Ação</option>
-                            <option value="Bônus">Bônus</option>
-                            <option value="Livre">Livre</option>
-                            <option value="Passiva">Passiva</option>
-                            <option value="Reação">Reação</option>
-                        </select>
-                        <input class="sheet-nomeacao" name="attr_namespells" type="text" spellcheck="false" value="" placeholder="Nome da Magia"/>
-                        <select class="sheet-custoacao" name="attr_custospells">
-                            <option value="-" selected>-</option>
-                            <option value="rep">Rep</option>
-                            <option value="1pe">1 PE</option>
-                            <option value="2pe">2 PE</option>
-                            <option value="3pe">3 PE</option>
-                            <option value="4pe">4 PE</option>
-                            <option value="5pe">5 PE</option>
-                        </select>
+                        <div class="sheet-style-acao">
+                            <input type="hidden" class="sheet-tipoacaoshow" name="attr_tipoacaoshow" value="" >
+                            <img class="sheet-img-acao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/acao.svg"/>
+                            <img class="sheet-img-bonus" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/bonus.svg"/>
+                            <img class="sheet-img-livre" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/1b8f412973cf0296d09e189b0c18752ac377bfc5/Skyfall/imgs/livre.svg"/>
+                            <img class="sheet-img-passiva" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/1b8f412973cf0296d09e189b0c18752ac377bfc5/Skyfall/imgs/passiva.svg"/>
+                            <img class="sheet-img-reacao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/reacao.svg"/>
+                        </div>
+                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{especial_actions=@{especial_actions}}}  {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}">
+                            <span class="sheet-name-action" name="attr_nameactionshow" value="@{nameaction}"></span>
+                        </button>
+                        <span name="attr_custoacaoshow" value="@{custoacao}" class="sheet-custo-header"></span>
                         <input type="checkbox" class="sheet-hiddencheckbox">
                         <span class="sheet-hiddencheckboxcover">y</span>
                         
                         <div class="sheet-extra">
+                            <select class="sheet-tipoacao" name="attr_tipoacao">
+                                <option value="Acao">Ação</option>
+                                <option value="Bonus">Bônus</option>
+                                <option value="Livre">Livre</option>
+                                <option value="Passiva">Passiva</option>
+                                <option value="Reacao">Reação</option>
+                            </select>
+                            <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value="" placeholder="Nome do Poder"/>
+                            <select class="sheet-custoacao" name="attr_custoacao">
+                                <option value="-" selected>-</option>
+                                <option value="rep">Rep</option>
+                                <option value="1pe">1 PE</option>
+                                <option value="2pe">2 PE</option>
+                                <option value="3pe">3 PE</option>
+                                <option value="4pe">4 PE</option>
+                                <option value="5pe">5 PE</option>
+                            </select>
                             <div class="sheet-even">
                                 <span>Informações</span>
                                 <input type="text" name="attr_info_spells">
@@ -1088,7 +1167,7 @@
                             <div class="sheet-even">
                                 <!--1 Modificação-->                             
                                 <label class="sheet-sigilo-label">Modificação:</label>
-                                <input type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <input type="checkbox" class="sheet-hiddencheckbox-internal" name="attr_modcheckone" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
                                 <div class="sheet-extra-internal">
                                     <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -1096,87 +1175,142 @@
                                     <textarea class="sheet-modificator-textarea" name="attr_description_actions"></textarea>
                                 </div>
                                 <!--2 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-two" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-two" name="attr_modchecktwo" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-two">
                                     <span>Custo da Modificação</span> <input name="attr_customodtwo_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodtwo_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptiontwo_actions"></textarea>
                                 </div>
                                 <!--3 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-three" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-three" name="attr_modcheckthree" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-three">
                                     <span>Custo da Modificação</span> <input name="attr_customodthree_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodthree_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionthree_actions"></textarea>
                                 </div>
                                 <!--4 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-four" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-four" name="attr_modcheckfour" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-four">
                                     <span>Custo da Modificação</span> <input name="attr_customodfour_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodfour_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionfour_actions"></textarea>
                                 </div>
                                 <!--5 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-five" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-five" name="attr_modcheckfive" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-five">
                                     <span>Custo da Modificação</span> <input name="attr_customodfive_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodfive_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionfive_actions"></textarea>
                                 </div>
                                 <!--6 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-six" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-six" name="attr_modchecksix" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-six">
                                     <span>Custo da Modificação</span> <input name="attr_customodsix_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodsix_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionsix_actions"></textarea>
                                 </div>
                                 <!--7 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-seven" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-seven" name="attr_modcheckseven" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-seven">
                                     <span>Custo da Modificação</span> <input name="attr_customodseven_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodseven_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionseven_actions"></textarea>
                                 </div>
                                 <!--8 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-eigth" style="display: none;">Modificação:</label>
+                                <input style="display: none;"type="checkbox" class="sheet-hiddencheckbox-internal-eigth" name="attr_modcheckeigth" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
-                                    <span>Custo da Modificação</span> <input name="attr_customodeight_actions" type="text" spellcheck="false" value="">
-                                    <span>Tipo de Modificação</span> <input name="attr_tipomodeight_actions" type="text" spellcheck="false" value="">
-                                    <textarea class="sheet-modificator-textarea" name="attr_descriptioneight_actions"></textarea>
+                                <div class="sheet-extra-internal-eigth">
+                                    <span>Custo da Modificação</span> <input name="attr_customodeigth_actions" type="text" spellcheck="false" value="">
+                                    <span>Tipo de Modificação</span> <input name="attr_tipomodeigth_actions" type="text" spellcheck="false" value="">
+                                    <textarea class="sheet-modificator-textarea" name="attr_descriptioneigth_actions"></textarea>
                                 </div>
                                 <!--9 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-nine" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-nine" name="attr_modchecknine" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-nine">
                                     <span>Custo da Modificação</span> <input name="attr_customodnine_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodnine_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionnine_actions"></textarea>
                                 </div>
                                 <!--10 Modificação-->                             
-                                <label class="sheet-sigilo-label" style="display: none;">Modificação:</label>
-                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal">
+                                <label class="sheet-sigilo-label-ten" style="display: none;">Modificação:</label>
+                                <input style="display: none;" type="checkbox" class="sheet-hiddencheckbox-internal-ten" name="attr_modcheckten" value="1">
                                 <!--<span class="sheet-hiddencheckboxcover-internal">y</span>-->
-                                <div class="sheet-extra-internal">
+                                <div class="sheet-extra-internal-ten">
                                     <span>Custo da Modificação</span> <input name="attr_customodten_actions" type="text" spellcheck="false" value="">
                                     <span>Tipo de Modificação</span> <input name="attr_tipomodten_actions" type="text" spellcheck="false" value="">
                                     <textarea class="sheet-modificator-textarea" name="attr_descriptionten_actions"></textarea>
                                 </div>
                             </div>                         
+                        </div>
+
+                        <div class="sheet-extra-body">
+                            <div class="sheet-extra-div" style="background-color: #424f66; padding:3px;"><span name="attr_descritores_show" class="sheet-descriptor-show" ></span></div>
+                            <div class="sheet-extra-div"><span name="attr_informacoes_show"></span></div>                        
+                            
+                            <div class="sheet-extra-div"><label>Alcance: </label><span name="attr_alcance_show"  placeholder="descritores"></span></div>
+                            <div class="sheet-extra-div"><label>Alvo: </label><span name="attr_alvo_show" placeholder="descritores"></span></div>
+                            <div class="sheet-extra-div"><label>Duração: </label><span name="attr_duracao_show" placeholder="descritores"></span></div>
+                            <div class="sheet-extra-div"><label>Componentes: </label><span name="attr_component_show" placeholder="descritores"></span></div>
+                            <div class="sheet-extra-div"><label>Gatilho: </label><span name="attr_gatilho_show"></span></div>
+                            <div class="sheet-extra-div"><label>Ataque: </label><span name="attr_ataque_show"></span></div>
+                            <div class="sheet-extra-div"><label>Acerto: </label><span name="attr_acerto_show"></span></div>
+                            <div class="sheet-extra-div"><label>Erro: </label><span name="attr_erro_show"></span></div>
+                            <div class="sheet-extra-div"><label>Efeito: </label><span name="attr_efeito_show"></span></div>
+                            <div class="sheet-extra-div"><label>Especial: </label><span name="attr_especial_show"></span></div>
+                            <!--1 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customod_show"></span> <span name="attr_tipomod_show"></span> <span name="attr_description_show"></span>
+                            </div>                        
+                            <!--2 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodtwo_show"></span> <span name="attr_tipomodtwo_show"></span> <span name="attr_descriptiontwo_show"></span>
+                            </div>
+                            <!--3 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodthree_show"></span> <span name="attr_tipomodthree_show"></span> <span name="attr_descriptionthree_show"></span>
+                            </div>
+                            <!--4 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodfour_show"></span> <span name="attr_tipomodfour_show"></span> <span name="attr_descriptionfour_show"></span>
+                            </div>
+                            <!--5 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodfive_show"></span> <span name="attr_tipomodfive_show"></span> <span name="attr_descriptionfive_show"></span>
+                            </div>
+                            <!--6 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodsix_show"></span> <span name="attr_tipomodsix_show"></span> <span name="attr_descriptionsix_show"></span>
+                            </div>
+                            <!--7 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodseven_show" ></span> <span name="attr_tipomodseven_show"></span> <span name="attr_descriptionseven_show"></span>
+                            </div>
+                            <!--8 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodeigth_show"></span> <span name="attr_tipomodeigth_show"></span> <span name="attr_descriptioneigth_show"></span>
+                            </div>
+                            <!--9 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodnine_show"></span> <span name="attr_tipomodnine_show"></span> <span name="attr_descriptionnine_show"></span>
+                            </div>
+                            <!--10 Mod-->
+                            <div class="sheet-extra-div">
+                                <span name="attr_customodten_show"></span> <span name="attr_tipomodten_show"></span>  <span name="attr_descriptionten_show"></span></div>
                         </div>
                     </div>
                 </fieldset>
@@ -1212,17 +1346,13 @@
 
     let calc_protection = function(){
         // Stat mods
-        ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].forEach(stat => {
-            console.log(stat);
-            
+        ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].forEach(stat => {            
             let base_stat = `character_${stat}`;
             let check_stat = `save_${stat}_check`;
             let save_value = `save_${stat}_value`;
 
             getAttrs([base_stat, check_stat, save_value, "proficient_bonus"], function(v){
                 let save = 10 + convert_to_int(v[base_stat]);
-
-                console.log(v[base_stat], v[check_stat], v[save_value]);
 
                 if(convert_to_int(v[check_stat]) == 1){
                     save += convert_to_int(v["proficient_bonus"]);
@@ -1298,13 +1428,9 @@
                 let repeeating_redano = "repeating_equipment_" + idarray[i] + "_reducaoequipamento";
 
                 getAttrs([repeeating_volume, repeeating_fragme, repeeating_redano], function(v){
-                    console.log(v[repeeating_volume], v[repeeating_fragme], v[repeeating_redano]);
-
                     volume += convert_to_int(v[repeeating_volume]);
                     fragmento += convert_to_int(v[repeeating_fragme]);
                     rd += convert_to_int(v[repeeating_redano]);
-
-                    console.log(volume, fragmento, rd);
 
                     setAttrs({["volumeatual"]: volume});
                     setAttrs({["fragmentosatual"]: fragmento});
@@ -1315,7 +1441,6 @@
     });
 
     on("clicked:skillroll", function(e){
-        console.log(e);
         let arr_skill = e.htmlAttributes.value.split('-');
 
         const skills_name = {
@@ -1349,8 +1474,6 @@
             if(arr_skill[1] == "desvantagem"){
                 roll_construction = `2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
             }
-
-            console.log(roll_construction);
 
             startRoll(`&{template:skillroll}{{character=@{character_name}}} {{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}} {{rolagem=[[ ${roll_construction} ]]}} {{reroll=${roll_construction} }}`, diceroll => {});
 
@@ -1474,10 +1597,289 @@
         });
     });
 
-    on("change:repeating_attacks:atkname change:repeating_attacks:atkflag change:repeating_attacks:atkattr_base change:repeating_attacks:atkmod change:repeating_attacks:atkmagic change:repeating_attacks:atkprofflag change:repeating_attacks:dmgflag change:repeating_attacks:dmgbase change:repeating_attacks:dmgattr change:repeating_attacks:dmgmod change:repeating_attacks:dmgtype change:repeating_attacks:dmg2flag change:repeating_attacks:dmg2base change:repeating_attacks:dmg2attr change:repeating_attacks:dmg2mod change:repeating_attacks:dmg2type change:repeating_attacks:saveflag change:repeating_attacks:savedc change:repeating_attacks:saveflat change:repeating_attacks:dmgcustcrit change:repeating_attacks:dmg2custcrit change:repeating_attacks:ammo change:repeating_attacks:saveattr change:repeating_attacks:atkrange", function(eventinfo) {
-        update_attacks("all");
+    const checkModification = (check, str) => check == 1 ? str : ' ';
+
+    const setEmpty = (str) => str ? str : '';
+
+    const update_spell_card = (eventinfo) => {
+        getSectionIDs("spells", function(idarray) {
+            for(var i=0; i < idarray.length; i++) {     
+                let id = idarray[i];
+
+                let tipoacao                = "repeating_spells_" + id + "_tipoacao";
+                let nameaction              = "repeating_spells_" + id + "_nameaction";
+                let custoacao               = "repeating_spells_" + id + "_custoacao";
+                let info_actions            = "repeating_spells_" + id + "_info_spells";
+                let descritores_actions     = "repeating_spells_" + id + "_descritores_actions";
+                let alcance_actions         = "repeating_spells_" + id + "_alcance_spells";
+                let alvo_actions            = "repeating_spells_" + id + "_alvo_spells";
+                let duracao_actions         = "repeating_spells_" + id + "_duracao_spells";
+                let component_actions       = "repeating_spells_" + id + "_component_spells";
+                let gatilho_actions         = "repeating_spells_" + id + "_gatilho_spells";
+                let ataque_actions          = "repeating_spells_" + id + "_ataque_spells";
+                let acerto_actions          = "repeating_spells_" + id + "_acerto_spells";
+                let erro_actions            = "repeating_spells_" + id + "_erro_spells";
+                let efeito_actions          = "repeating_spells_" + id + "_efeito_spells";
+                let especial_actions        = "repeating_spells_" + id + "_especial_spells";
+
+                let customod_actions         = "repeating_spells_" + id + "_customod_actions";
+                let tipomod_actions          = "repeating_spells_" + id + "_tipomod_actions";
+                let description_actions      = "repeating_spells_" + id + "_description_actions";
+                let customodtwo_actions      = "repeating_spells_" + id + "_customodtwo_actions";
+                let tipomodtwo_actions       = "repeating_spells_" + id + "_tipomodtwo_actions";
+                let descriptiontwo_actions   = "repeating_spells_" + id + "_descriptiontwo_actions";
+                let customodthree_actions    = "repeating_spells_" + id + "_customodthree_actions";
+                let tipomodthree_actions     = "repeating_spells_" + id + "_tipomodthree_actions";
+                let descriptionthree_actions = "repeating_spells_" + id + "_descriptionthree_actions";
+                let customodfour_actions     = "repeating_spells_" + id + "_customodfour_actions";
+                let tipomodfour_actions      = "repeating_spells_" + id + "_tipomodfour_actions";
+                let descriptionfour_actions  = "repeating_spells_" + id + "_descriptionfour_actions";
+                let customodfive_actions     = "repeating_spells_" + id + "_customodfive_actions";
+                let tipomodfive_actions      = "repeating_spells_" + id + "_tipomodfive_actions";
+                let descriptionfive_actions  = "repeating_spells_" + id + "_descriptionfive_actions";
+                let customodsix_actions      = "repeating_spells_" + id + "_customodsix_actions";
+                let tipomodsix_actions       = "repeating_spells_" + id + "_tipomodsix_actions";
+                let descriptionsix_actions   = "repeating_spells_" + id + "_descriptionsix_actions";
+                let customodseven_actions    = "repeating_spells_" + id + "_customodseven_actions";
+                let tipomodseven_actions     = "repeating_spells_" + id + "_tipomodseven_actions";
+                let descriptionseven_actions = "repeating_spells_" + id + "_descriptionseven_actions";
+                let customodeigth_actions    = "repeating_spells_" + id + "_customodeigth_actions";
+                let tipomodeigth_actions     = "repeating_spells_" + id + "_tipomodeigth_actions";
+                let descriptioneigth_actions = "repeating_spells_" + id + "_descriptioneigth_actions";
+                let customodnine_actions     = "repeating_spells_" + id + "_customodnine_actions";
+                let tipomodnine_actions      = "repeating_spells_" + id + "_tipomodnine_actions";
+                let descriptionnine_actions  = "repeating_spells_" + id + "_descriptionnine_actions";
+                let customodten_actions      = "repeating_spells_" + id + "_customodten_actions";
+                let tipomodten_actions       = "repeating_spells_" + id + "_tipomodten_actions";
+                let descriptionten_actions   = "repeating_spells_" + id + "_descriptionten_actions";
+
+                let modcheck_actions_one     = "repeating_spells_" + id + "_modcheckone";
+                let modcheck_actions_two     = "repeating_spells_" + id + "_modchecktwo";
+                let modcheck_actions_three   = "repeating_spells_" + id + "_modcheckthree";
+                let modcheck_actions_four    = "repeating_spells_" + id + "_modcheckfour";
+                let modcheck_actions_five    = "repeating_spells_" + id + "_modcheckfive";
+                let modcheck_actions_six     = "repeating_spells_" + id + "_modchecksix";
+                let modcheck_actions_seven   = "repeating_spells_" + id + "_modcheckseven";
+                let modcheck_actions_eigth   = "repeating_spells_" + id + "_modcheckeigth";
+                let modcheck_actions_nine    = "repeating_spells_" + id + "_modchecknine";
+                let modcheck_actions_ten     = "repeating_spells_" + id + "_modcheckten";
+
+                getAttrs([tipoacao, nameaction, custoacao, info_actions, descritores_actions, alcance_actions, alvo_actions, duracao_actions, component_actions,
+                    gatilho_actions, ataque_actions, acerto_actions, erro_actions, efeito_actions, especial_actions, customod_actions, tipomod_actions,
+                    description_actions, customodtwo_actions, tipomodtwo_actions, descriptiontwo_actions,
+                    customodthree_actions, tipomodthree_actions, descriptionthree_actions, customodfour_actions,tipomodfour_actions, descriptionfour_actions, customodfive_actions, tipomodfive_actions,   
+                    descriptionfive_actions, customodsix_actions, tipomodsix_actions, descriptionsix_actions, customodseven_actions, tipomodseven_actions, descriptionseven_actions, customodeigth_actions,   
+                    tipomodeigth_actions, descriptioneigth_actions, customodnine_actions, tipomodnine_actions, descriptionnine_actions, customodten_actions, tipomodten_actions, descriptionten_actions,
+                    modcheck_actions_one, modcheck_actions_two, modcheck_actions_three, modcheck_actions_four, modcheck_actions_five, modcheck_actions_six, modcheck_actions_seven, 
+                    modcheck_actions_eigth, modcheck_actions_nine, modcheck_actions_ten
+                ], function(v){
+                        setAttrs({[`repeating_spells_${id}_nameactionshow`]: setEmpty(v[nameaction])});
+                        setAttrs({[`repeating_spells_${id}_custoacaoshow`]: setEmpty(v[custoacao])});                     
+                        setAttrs({[`repeating_spells_${id}_descritores_show`]: setEmpty(v[descritores_actions])});
+                        setAttrs({[`repeating_spells_${id}_informacoes_show`]: setEmpty(v[info_actions])});
+                        setAttrs({[`repeating_spells_${id}_alcance_show`]: setEmpty(v[alcance_actions])});
+                        setAttrs({[`repeating_spells_${id}_alvo_show`]: setEmpty(v[alvo_actions])});
+                        setAttrs({[`repeating_spells_${id}_duracao_show`]: setEmpty(v[duracao_actions])});
+                        setAttrs({[`repeating_spells_${id}_component_show`]: setEmpty(v[component_actions])});
+                        setAttrs({[`repeating_spells_${id}_gatilho_show`]: setEmpty(v[gatilho_actions])});
+                        setAttrs({[`repeating_spells_${id}_ataque_show`]: setEmpty(v[ataque_actions])});
+                        setAttrs({[`repeating_spells_${id}_acerto_show`]: setEmpty(v[acerto_actions])});
+                        setAttrs({[`repeating_spells_${id}_erro_show`]: setEmpty(v[erro_actions])});
+                        setAttrs({[`repeating_spells_${id}_efeito_show`]: setEmpty(v[efeito_actions])});
+                        setAttrs({[`repeating_spells_${id}_especial_show`]: setEmpty(v[especial_actions])});
+                        setAttrs({[`repeating_spells_${id}_tipoacaoshow`]: setEmpty(v[tipoacao])});
+
+                        console.log(v[modcheck_actions_one]);
+                        
+                        setAttrs({[`repeating_spells_${id}_customod_show`]: checkModification(v[modcheck_actions_one], setEmpty(v[customod_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomod_show`]: checkModification(v[modcheck_actions_one],setEmpty(v[tipomod_actions])) });                        
+                        setAttrs({[`repeating_spells_${id}_description_show`]: checkModification(v[modcheck_actions_one],setEmpty(v[description_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodtwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[customodtwo_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodtwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[tipomodtwo_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptiontwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[descriptiontwo_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[tipomodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[tipomodfour_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[tipomodfive_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[tipomodsix_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[tipomodseven_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodeigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[tipomodeigth_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodeigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptioneigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[tipomodnine_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_tipomodten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[tipomodten_actions])) });
+                        setAttrs({[`repeating_spells_${id}_customodten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_spells_${id}_descriptionten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[customodthree_actions])) });
+                });
+
+            }            
+        });        
+    }
+    
+    const update_action_card = (eventinfo) => {
+        getSectionIDs("actions", function(idarray) { 
+            for(var i=0; i < idarray.length; i++) {     
+                let id = idarray[i];
+
+                let tipoacao                = "repeating_actions_" + id + "_tipoacao";
+                let nameaction              = "repeating_actions_" + id + "_nameaction";
+                let custoacao               = "repeating_actions_" + id + "_custoacao";
+                let info_actions            = "repeating_actions_" + id + "_info_actions";
+                let descritores_actions     = "repeating_actions_" + id + "_descritores_actions";
+                let alcance_actions         = "repeating_actions_" + id + "_alcance_actions";
+                let alvo_actions            = "repeating_actions_" + id + "_alvo_actions";
+                let duracao_actions         = "repeating_actions_" + id + "_duracao_actions";
+                let component_actions       = "repeating_actions_" + id + "_component_actions";
+                let gatilho_actions         = "repeating_actions_" + id + "_gatilho_actions";
+                let ataque_actions          = "repeating_actions_" + id + "_ataque_actions";
+                let acerto_actions          = "repeating_actions_" + id + "_acerto_actions";
+                let erro_actions            = "repeating_actions_" + id + "_erro_actions";
+                let efeito_actions          = "repeating_actions_" + id + "_efeito_actions";
+                let especial_actions        = "repeating_actions_" + id + "_especial_actions";
+
+                let customod_actions        = "repeating_actions_" + id + "_customod_actions";
+                let tipomod_actions         = "repeating_actions_" + id + "_tipomod_actions";
+                let description_actions     = "repeating_actions_" + id + "_description_actions";
+                let customodtwo_actions     = "repeating_actions_" + id + "_customodtwo_actions";
+                let tipomodtwo_actions      = "repeating_actions_" + id + "_tipomodtwo_actions";
+                let descriptiontwo_actions  = "repeating_actions_" + id + "_descriptiontwo_actions";
+                let customodthree_actions   = "repeating_actions_" + id + "_customodthree_actions";
+                let tipomodthree_actions    = "repeating_actions_" + id + "_tipomodthree_actions";
+                let descriptionthree_actions = "repeating_actions_" + id + "_descriptionthree_actions";
+                let customodfour_actions     = "repeating_actions_" + id + "_customodfour_actions";
+                let tipomodfour_actions      = "repeating_actions_" + id + "_tipomodfour_actions";
+                let descriptionfour_actions  = "repeating_actions_" + id + "_descriptionfour_actions";
+                let customodfive_actions     = "repeating_actions_" + id + "_customodfive_actions";
+                let tipomodfive_actions      = "repeating_actions_" + id + "_tipomodfive_actions";
+                let descriptionfive_actions  = "repeating_actions_" + id + "_descriptionfive_actions";
+                let customodsix_actions      = "repeating_actions_" + id + "_customodsix_actions";
+                let tipomodsix_actions       = "repeating_actions_" + id + "_tipomodsix_actions";
+                let descriptionsix_actions   = "repeating_actions_" + id + "_descriptionsix_actions";
+                let customodseven_actions    = "repeating_actions_" + id + "_customodseven_actions";
+                let tipomodseven_actions     = "repeating_actions_" + id + "_tipomodseven_actions";
+                let descriptionseven_actions = "repeating_actions_" + id + "_descriptionseven_actions";
+                let customodeigth_actions    = "repeating_actions_" + id + "_customodeigth_actions";
+                let tipomodeigth_actions     = "repeating_actions_" + id + "_tipomodeigth_actions";
+                let descriptioneigth_actions = "repeating_actions_" + id + "_descriptioneigth_actions";
+                let customodnine_actions     = "repeating_actions_" + id + "_customodnine_actions";
+                let tipomodnine_actions      = "repeating_actions_" + id + "_tipomodnine_actions";
+                let descriptionnine_actions  = "repeating_actions_" + id + "_descriptionnine_actions";
+                let customodten_actions     = "repeating_actions_" + id + "_customodten_actions";
+                let tipomodten_actions      = "repeating_actions_" + id + "_tipomodten_actions";
+                let descriptionten_actions  = "repeating_actions_" + id + "_descriptionten_actions";
+
+                let modcheck_actions_one     = "repeating_actions_" + id + "_modcheckone";
+                let modcheck_actions_two     = "repeating_actions_" + id + "_modchecktwo";
+                let modcheck_actions_three   = "repeating_actions_" + id + "_modcheckthree";
+                let modcheck_actions_four    = "repeating_actions_" + id + "_modcheckfour";
+                let modcheck_actions_five    = "repeating_actions_" + id + "_modcheckfive";
+                let modcheck_actions_six     = "repeating_actions_" + id + "_modchecksix";
+                let modcheck_actions_seven   = "repeating_actions_" + id + "_modcheckseven";
+                let modcheck_actions_eigth   = "repeating_actions_" + id + "_modcheckeigth";
+                let modcheck_actions_nine    = "repeating_actions_" + id + "_modchecknine";
+                let modcheck_actions_ten     = "repeating_actions_" + id + "_modcheckten";
+
+                getAttrs([tipoacao, nameaction, custoacao, info_actions, descritores_actions, alcance_actions, alvo_actions, duracao_actions, component_actions,
+                    gatilho_actions, ataque_actions, acerto_actions, erro_actions, efeito_actions, especial_actions, customod_actions, tipomod_actions,
+                    description_actions, customodtwo_actions, tipomodtwo_actions, descriptiontwo_actions,
+                    customodthree_actions, tipomodthree_actions, descriptionthree_actions, customodfour_actions,tipomodfour_actions, descriptionfour_actions, customodfive_actions, tipomodfive_actions,     
+                    descriptionfive_actions, customodsix_actions, tipomodsix_actions, descriptionsix_actions, customodseven_actions, tipomodseven_actions, descriptionseven_actions, customodeigth_actions, 
+                    tipomodeigth_actions, descriptioneigth_actions, customodnine_actions, tipomodnine_actions, descriptionnine_actions, customodten_actions, tipomodten_actions, descriptionten_actions,
+                    modcheck_actions_one, modcheck_actions_two, modcheck_actions_three, modcheck_actions_four, modcheck_actions_five, modcheck_actions_six, modcheck_actions_seven, 
+                    modcheck_actions_eigth, modcheck_actions_nine, modcheck_actions_ten   
+                ], function(v){
+
+                        setAttrs({[`repeating_actions_${id}_nameactionshow`]: setEmpty(v[nameaction])});
+                        setAttrs({[`repeating_actions_${id}_custoacaoshow`]: setEmpty(v[custoacao])});                     
+                        setAttrs({[`repeating_actions_${id}_descritores_show`]: setEmpty(v[descritores_actions])});
+                        setAttrs({[`repeating_actions_${id}_informacoes_show`]: setEmpty(v[info_actions])});
+                        setAttrs({[`repeating_actions_${id}_alcance_show`]: setEmpty(v[alcance_actions])});
+                        setAttrs({[`repeating_actions_${id}_alvo_show`]: setEmpty(v[alvo_actions])});
+                        setAttrs({[`repeating_actions_${id}_duracao_show`]: setEmpty(v[duracao_actions])});
+                        setAttrs({[`repeating_actions_${id}_component_show`]: setEmpty(v[component_actions])});
+                        setAttrs({[`repeating_actions_${id}_gatilho_show`]: setEmpty(v[gatilho_actions])});
+                        setAttrs({[`repeating_actions_${id}_ataque_show`]: setEmpty(v[ataque_actions])});
+                        setAttrs({[`repeating_actions_${id}_acerto_show`]: setEmpty(v[acerto_actions])});
+                        setAttrs({[`repeating_actions_${id}_erro_show`]: setEmpty(v[erro_actions])});
+                        setAttrs({[`repeating_actions_${id}_efeito_show`]: setEmpty(v[efeito_actions])});
+                        setAttrs({[`repeating_actions_${id}_especial_show`]: setEmpty(v[especial_actions])});
+                        setAttrs({[`repeating_actions_${id}_tipoacaoshow`]: setEmpty(v[tipoacao])});
+
+                        setAttrs({[`repeating_actions_${id}_customod_show`]: checkModification(v[modcheck_actions_one], setEmpty(v[customod_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomod_show`]: checkModification(v[modcheck_actions_one],setEmpty(v[tipomod_actions])) });                        
+                        setAttrs({[`repeating_actions_${id}_description_show`]: checkModification(v[modcheck_actions_one],setEmpty(v[description_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodtwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[customodtwo_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodtwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[tipomodtwo_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptiontwo_show`]: checkModification(v[modcheck_actions_two],setEmpty(v[descriptiontwo_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[tipomodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionthree_show`]: checkModification(v[modcheck_actions_three],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[tipomodfour_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionfour_show`]: checkModification(v[modcheck_actions_four],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[tipomodfive_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionfive_show`]: checkModification(v[modcheck_actions_five],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[tipomodsix_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionsix_show`]: checkModification(v[modcheck_actions_six],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[tipomodseven_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionseven_show`]: checkModification(v[modcheck_actions_seven],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodeigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[tipomodeigth_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodeigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptioneigth_show`]: checkModification(v[modcheck_actions_eigth],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[tipomodnine_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionnine_show`]: checkModification(v[modcheck_actions_nine],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_tipomodten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[tipomodten_actions])) });
+                        setAttrs({[`repeating_actions_${id}_customodten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[customodthree_actions])) });
+                        setAttrs({[`repeating_actions_${id}_descriptionten_show`]: checkModification(v[modcheck_actions_ten],setEmpty(v[customodthree_actions])) });
+                        
+                });
+
+            }            
+        });        
+    }
+
+    ['tipoacao', 'nameaction', 'custoacao', 'info_actions', 'descritores_actions', 'alcance_actions', 'alvo_actions', 'duracao_actions', 'component_actions',
+        'gatilho_actions', 'ataque_actions', 'acerto_actions', 'erro_actions', 'efeito_actions', 'especial_actions', 'customod_actions', 'tipomod_actions',
+        'description_actions', 'customodtwo_actions', 'tipomodtwo_actions', 'descriptiontwo_actions', 'customodthree_actions', 'tipomodthree_actions', 'descriptionthree_actions',
+        'customodfour_actions', 'tipomodfour_actions', 'descriptionfour_actions', 'customodfive_actions', 'tipomodfive_actions', 'descriptionfive_actions',
+        'customodsix_actions', 'tipomodsix_actions', 'descriptionsix_actions', 'customodseven_actions', 'tipomodseven_actions', 'descriptionseven_actions',
+        'customodeigth_actions', 'tipomodeigth_actions', 'descriptioneigth_actions', 'customodnine_actions', 'tipomodnine_actions', 'descriptionnine_actions',
+        'customodten_actions', 'tipomodten_actions', 'descriptionten_actions',
+        "modcheckone", "modchecktwo", "modcheckthree","modcheckfour","modcheckfive","modchecksix", "modcheckseven","modcheckeigth","modchecknine", "modcheckten"
+    ].forEach(atb => {
+        on(`change:repeating_actions:${atb}`, function(eventinfo){
+            update_action_card(eventinfo);
+        });
     });
-      
+
+    ['tipoacao', 'nameaction', 'custoacao', 'info_actions', 'descritores_actions', 'alcance_actions', 'alvo_actions', 'duracao_actions', 'component_actions',
+        'gatilho_actions', 'ataque_actions', 'acerto_actions', 'erro_actions', 'efeito_actions', 'especial_actions', 'customod_actions', 'tipomod_actions',
+        'description_actions', 'customodtwo_actions', 'tipomodtwo_actions', 'descriptiontwo_actions', 'customodthree_actions', 'tipomodthree_actions', 'descriptionthree_actions',
+        'customodfour_actions', 'tipomodfour_actions', 'descriptionfour_actions', 'customodfive_actions', 'tipomodfive_actions', 'descriptionfive_actions',
+        'customodsix_actions', 'tipomodsix_actions', 'descriptionsix_actions', 'customodseven_actions', 'tipomodseven_actions', 'descriptionseven_actions',
+        'customodeigth_actions', 'tipomodeigth_actions', 'descriptioneigth_actions', 'customodnine_actions', 'tipomodnine_actions', 'descriptionnine_actions',
+        'customodten_actions', 'tipomodten_actions', 'descriptionten_actions',
+        "modcheckone", "modchecktwo", "modcheckthree","modcheckfour","modcheckfive","modchecksix", "modcheckseven","modcheckeigth","modchecknine", "modcheckten",
+    ].forEach(atb => {
+        on(`change:repeating_spells:${atb}`, function(eventinfo){
+            update_spell_card(eventinfo);
+        });
+    });
       
     const update_attacks = (update_id, source) => {
         if (update_id.substring(0,1) === "-" && update_id.length === 20) {
@@ -1569,7 +1971,7 @@
                     atkattr_abrev = v[`${repeating_attacks}_atkattr_base`].substring(2, 5).toUpperCase();
                 };
 
-                console.log("AtkBase", atkattr_base);
+                //console.log("AtkBase", atkattr_base);
     
                 //DAMAGE 1 ability select inside settings for the repeating attack
                 if (!v[`${repeating_attacks}_dmgattr`] || v[`${repeating_attacks}_dmgattr`] === "0") {
@@ -1621,7 +2023,7 @@
                 const atkflag = v[`${repeating_attacks}_atkflag`] || 0;
                 if (atkflag != 0) {
                     bonus_mod  = atkattr_base + atkmod + atkmag + magicattackmod;
-                    console.log("variaveis:", atkattr_base, atkmod, atkmag, magicattackmod, bonus_mod);
+                    //console.log("variaveis:", atkattr_base, atkmod, atkmag, magicattackmod, bonus_mod);
                     plus_minus = (bonus_mod > -1) ? "+" : "";
                     //pb_type is PROFICIENCY BONUS select in Settings
                     if (v["pb_type"] && v["pb_type"] === "die") {
