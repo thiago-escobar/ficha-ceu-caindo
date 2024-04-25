@@ -300,6 +300,8 @@
     width: 92.7%;
     margin-left: 3.1%;
     margin-top: 2px;
+    position: relative;
+    z-index: 2;
 }
 .sheet-attribute-save-check{
     margin-right: 73px !important;
@@ -317,6 +319,8 @@
     width: 92.7%;
     margin-top: -15px;
     margin-left: 4.2%;
+    position: relative;
+    z-index: 1;
 }
 .sheet-attribute-save-value{
     width: 50px;
@@ -1290,7 +1294,9 @@
 }
 
 .sheet-equipment .repcontainer[data-groupname="repeating_actions"]>.repitem .sheet-container-single-spell .sheet-extra-internal textarea,
-.sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra-internal-two textarea,
+.sheet-equipment .repcontainer[data-groupname="repeating_spells"]>.repitem .sheet-container-single-spell .sheet-extra-internal textarea,
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal textarea,
+.sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal-two textarea,
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal-three textarea,
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal-four textarea,
 .sheet-equipment .repcontainer[data-groupname="repeating_equipment"]>.repitem .sheet-container-equipment .sheet-extra-internal-five textarea,
@@ -1466,7 +1472,7 @@
   .sheet-attacks {
     width: 100%;
     border-radius: 5px;
-    min-height: 150px;
+    min-height: 200px;
     margin-bottom: 10px;
     padding-top: 20px;
   }
@@ -1712,6 +1718,10 @@
   .sheet-darkmode .licensecontainer .container:not(.npc) .sheet-attacks {
     border-image-source: url(https://storage.googleapis.com/char-sheet-app-images-6e101411/D%26D5e/images/darkmode/5eBorder_dm.svg);
   }
+
+  .sheet-rolltemplate-darkmode{
+    color: black !important;
+  }
   
 
   .sheet-attacks .sheet-options-flag{
@@ -1731,6 +1741,8 @@
   background-repeat: no-repeat;
   background-size: 100%;
   padding:15px;  
+  font-size: 17px;
+  color: black;
 }
 
 .sheet-rolltemplate-atkdmg span,
@@ -1745,6 +1757,7 @@
 .sheet-rolltemplate-skillroll .sheet-sublabel, .sheet-rolltemplate-skillroll .sheet-label,
 .sheet-rolltemplate-skillroll .sheet-desc{
   padding-bottom: 15px;
+  font-size: 17px;
   margin-bottom: 1px solid black;
 }
 
@@ -1760,9 +1773,8 @@
 }
 
 .sheet-rolltemplate-atkdmg .sheet-damagetemplate{
-  border: 2px solid black;
+  border: 5px solid black;
   background-color: white;
-  border-radius: 15%;
 }
 
 .sheet-rolltemplate-atkdmg .sheet-damagetemplate .sheet-result{
@@ -1873,10 +1885,10 @@
 
 /*Action & Spells*/
 .sheet-rolltemplate-actspell, .sheet-rolltemplate-characteristic{
-  background-image: url('https://imgsrv.roll20.net/?src=https%3A//raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/skyfall-new-sheet/Skyfall/imgs/attacks-start.png');
+  background-color: #f1ede7;
+  border: 5px solid #424f66;
   background-repeat: no-repeat;
   background-size: 100%;
-  padding:15px;  
 }
 
 .sheet-rolltemplate-actspell span{
@@ -1910,11 +1922,12 @@
   font-size: 18px;
 }
 
-.sheet-rolltemplate-actspell .sheet-actionspell-info,
 .sheet-rolltemplate-skillroll .sheet-actionspell-info,
 .sheet-rolltemplate-characteristic .sheet-actionspell-info{
   background-color: white;
-  padding: 5px;
+  padding: 10px;
+  border: 5px solid black;
+  margin-top: 7px;
 }
 
 .sheet-rolltemplate-skillroll .sheet-skillreroll {
@@ -1925,21 +1938,6 @@
   padding: 5px;
   color: white;
   background-color: #222b54;
-}
-
-.sheet-rolltemplate-actspell .sheet-actionspell-descriptor{
-  margin-top:3px;
-  margin-bottom:3px;
-}
-
-.sheet-rolltemplate-actspell .sheet-actionspell-white {
-  background-color: white;
-  padding: 5px;
-}
-
-.sheet-rolltemplate-actspell .sheet-actionspell-black{
-  background-color: #D3D3D3;
-  padding: 5px;
 }
 
 .sheet-attributes-secound-part{
@@ -1973,4 +1971,43 @@
 .sheet-collumn-attack{
     float:left;
     width: 70%;
+}
+
+.sheet-rolltemplate-actspell .sheet-container-actspell .sheet-charname {
+  background-color: #404d64;
+  color: white !important;
+}
+
+.sheet-rolltemplate-actspell .sheet-container-actspell .sheet-charname span {
+  color: white !important;
+}
+
+.sheet-rolltemplate-actspell .sheet-container-actspell .sheet-actionspell-header {
+  background-color: #404d64;
+  color: white !important;
+}
+
+.sheet-rolltemplate-actspell .sheet-container-actspell .sheet-actionspell-header span{
+  color: white !important;
+}
+
+.sheet-rolltemplate-actspell .sheet-actionspell-descriptor{
+  margin: 5px;
+  padding: 3px;
+  background-color: #424f66;
+}
+
+.sheet-rolltemplate-actspell .sheet-actionspell-descriptor span{
+  color: white !important;
+}
+
+.sheet-rolltemplate-actspell .sheet-actionspell-body{
+  background-color: #F1EDE7;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.sheet-rolltemplate-actspell .sheet-actionspell-info {
+  margin: 5px;
+  font-size: 16px;
 }

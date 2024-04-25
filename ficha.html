@@ -659,6 +659,8 @@
                                 <button type="roll" name="roll_spelldesc_link" style="display: none;" value="@{spelldesc_link}" class="btn ui-draggable"></button>
                                 <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{rollbase_dmg}" class="btn ui-draggable"></button>
                                 <button type="roll" name="roll_attack_crit" style="display: none;" value="@{rollbase_crit}" class="btn ui-draggable"></button>
+
+                                <button type="roll" name="roll_reroll" class="sheet-hiddenelement" value="@{rollbase}"></button>
                             </div> 
                         </fieldset>
                         <!-- Ataques -->                    
@@ -886,7 +888,7 @@
                         <img class="sheet-img-reacao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/reacao.svg"/>
                     </div>
                     <button type="roll" name="roll_spell1" class="buttonspell" 
-                        value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{especial_actions=@{especial_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}">
+                        value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{especial_actions=@{especial_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{modcheckone}@{modchecktwo}@{modcheckthree}@{modcheckfour}@{modcheckfive}@{modchecksix}@{modcheckseven}@{modcheckeigth}@{modchecknine}@{modcheckten}}} {{customodtwo=@{customodtwo_actions}}} {{tipomodtwo=@{tipomodtwo_actions}}}   {{descriptiontwo=@{descriptiontwo_actions}}} {{customodthree=@{customodthree_actions}}}  {{tipomodthree=@{tipomodthree_actions}}} {{descriptionthree=@{descriptionthree_actions}}} {{customodfour=@{customodfour_actions}}}    {{tipomodfour=@{tipomodfour_actions}}}  {{descriptionfour=@{descriptionfour_actions}}} {{customodfive=@{customodfive_actions}}}    {{tipomodfive=@{tipomodfive_actions}}}  {{descriptionfive=@{descriptionfive_actions}}} {{customodsix=@{customodsix_actions}}}      {{tipomodsix=@{tipomodsix_actions}}}   {{descriptionsix=@{descriptionsix_actions}}} {{customodseven=@{customodseven_actions}}}  {{tipomodseven=@{tipomodseven_actions}}} {{descriptionseven=@{descriptionseven_actions}}} {{customodeigth=@{customodeigth_actions}}}  {{tipomodeigth=@{tipomodeigth_actions}}} {{descriptioneigth=@{descriptioneigth_actions}}} {{customodnine=@{customodnine_actions}}}    {{tipomodnine=@{tipomodnine_actions}}}  {{descriptionnine=@{descriptionnine_actions}}} {{customodten=@{customodten_actions}}} {{tipomodten=@{tipomodten_actions}}} {{descriptionten=@{descriptionten_actions}}} {{modcheckone=[[@{modcheckone}]]}} {{modchecktwo=[[@{modchecktwo}]}} {{{modcheckthree}=[[@{modcheckthree}]}} {{{modcheckfour}=[[@{modcheckfour}]}} {{{modcheckfive}=[[@{modcheckfive}]}} {{{modchecksix}=[[@{modchecksix}]}} {{{modcheckseven}=[[@{modcheckseven}]}} {{{modcheckeigth}=[[@{modcheckeigth}]}} {{{modchecknine}=[[@{modchecknine}]}} {{{modcheckten=}[[@{modcheckten}]}} ">
                         <span class="sheet-name-action" name="attr_nameactionshow" value="@{nameaction}"></span>
                     </button>
                     <span name="attr_custoacaoshow" value="@{custoacao}" class="sheet-custo-header"></span>
@@ -1117,7 +1119,7 @@
                             <img class="sheet-img-passiva" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/1b8f412973cf0296d09e189b0c18752ac377bfc5/Skyfall/imgs/passiva.svg"/>
                             <img class="sheet-img-reacao" src="https://raw.githubusercontent.com/Capycat-Games/roll20-character-sheets/24d74a3cc49e69bf42c854cd8b1c5ee4f8e7b8f1/Skyfall/imgs/reacao.svg"/>
                         </div>
-                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{especial_actions=@{especial_actions}}}  {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}">
+                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{especial_actions=@{especial_actions}}}  {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{modcheckone}@{modchecktwo}@{modcheckthree}@{modcheckfour}@{modcheckfive}@{modchecksix}@{modcheckseven}@{modcheckeigth}@{modchecknine}@{modcheckten}}} {{customodtwo=@{customodtwo_actions}}} {{tipomodtwo=@{tipomodtwo_actions}}}   {{descriptiontwo=@{descriptiontwo_actions}}} {{customodthree=@{customodthree_actions}}}  {{tipomodthree=@{tipomodthree_actions}}} {{descriptionthree=@{descriptionthree_actions}}} {{customodfour=@{customodfour_actions}}}    {{tipomodfour=@{tipomodfour_actions}}}  {{descriptionfour=@{descriptionfour_actions}}} {{customodfive=@{customodfive_actions}}}    {{tipomodfive=@{tipomodfive_actions}}}  {{descriptionfive=@{descriptionfive_actions}}} {{customodsix=@{customodsix_actions}}}      {{tipomodsix=@{tipomodsix_actions}}}   {{descriptionsix=@{descriptionsix_actions}}} {{customodseven=@{customodseven_actions}}}  {{tipomodseven=@{tipomodseven_actions}}} {{descriptionseven=@{descriptionseven_actions}}} {{customodeigth=@{customodeigth_actions}}}  {{tipomodeigth=@{tipomodeigth_actions}}} {{descriptioneigth=@{descriptioneigth_actions}}} {{customodnine=@{customodnine_actions}}}    {{tipomodnine=@{tipomodnine_actions}}}  {{descriptionnine=@{descriptionnine_actions}}} {{customodten=@{customodten_actions}}} {{tipomodten=@{tipomodten_actions}}} {{descriptionten=@{descriptionten_actions}}} {{modcheckone=[[@{modcheckone}]]}} {{modchecktwo=[[@{modchecktwo}]}} {{{modcheckthree}=[[@{modcheckthree}]}} {{{modcheckfour}=[[@{modcheckfour}]}} {{{modcheckfive}=[[@{modcheckfive}]}} {{{modchecksix}=[[@{modchecksix}]}} {{{modcheckseven}=[[@{modcheckseven}]}} {{{modcheckeigth}=[[@{modcheckeigth}]}} {{{modchecknine}=[[@{modchecknine}]}} {{{modcheckten=}[[@{modcheckten}]}} ">
                             <span class="sheet-name-action" name="attr_nameactionshow" value="@{nameaction}"></span>
                         </button>
                         <span name="attr_custoacaoshow" value="@{custoacao}" class="sheet-custo-header"></span>
@@ -1323,6 +1325,9 @@
 <input type="hidden" name="attr_selectedrawvalue" value="" readonly="1">
 <input type="hidden" name="attr_rawattribute" value="" readonly="1">
 
+<button type="roll" name="roll_reroll" class="sheet-hiddenelement" value="@{rawroll}"></button>
+<input type="hidden" name="attr_rawroll" value="" readonly="1">
+
 <script type="text/worker">
     let calc_proficiency = function() {
         getAttrs(["character_level", "character_second_level", "character_third_level", "proficient_bonus"], function(v){
@@ -1400,10 +1405,10 @@
                     "strength": "Força", "dexterity": "Destreza", "constitution": "Constituição", "intelligence": "Inteligência", "wisdom": "Sabedoria", "charisma": "Carisma"
                 }
 
-                let roll_construction = `?{Rolagem|Simples, 1d20|Vantagem, 2d20kh1|Desvantagem, 2d20kl1}+${v["selectedrawvalue"]} + (@{save_${attribute}_check} * @{proficient_bonus}&#41; + ?{Bônus|0}`;
-                                
-                startRoll(`&{template:skillroll} {{character=${v.character_name}}} {{pericia=${atribute_name[attribute]}}} {{rolagem=[[${roll_construction}]]}} {{reroll=${roll_construction} }}`, diceroll => {
-                    
+                let roll_construction = `?{Rolagem|Simples, 1d20|Vantagem, 2d20kh1|Desvantagem, 2d20kl1} + ${v["selectedrawvalue"]} + (@{save_${attribute}_check} * @{proficient_bonus}) + ?{Bônus|0}`;
+                let final_roll = `&{template:skillroll} {{character=${v.character_name}}} {{pericia=${atribute_name[attribute]}}} {{rolagem=[[${roll_construction}]]}} {{reroll=[ReRoll](~reroll)}}`;
+                
+                startRoll(final_roll, diceroll => {
                 });                
 
                 $20(`.sheet-attr-span-${attribute}`).removeClass("sheet-active-element");
@@ -1412,6 +1417,7 @@
                 setAttrs({[`selectedattribute`]: "" });
                 setAttrs({[`selectedrawvalue`]: "" });
                 setAttrs({[`rawattribute`]: ""});
+                setAttrs({[`rawroll`]: final_roll});
             }
         }); 
     }
@@ -1455,7 +1461,7 @@
             "strength": "Força", "dexterity": "Destreza", "constitution": "Constituição", "intelligence": "Inteligência", "wisdom": "Sabedoria", "charisma": "Carisma"
         }
 
-        getAttrs(["apidaoum_selectbox", "apidaodois_selectbox", "apidaotres_selectbox", "selectedattribute","selectedrawvalue", "rawattribute", `${arr_skill[0]}_checkbox`,  `${arr_skill[0]}_proficiency`, "proficient_bonus", `${arr_skill[0]}_especialization`, `mod_${arr_skill[0]}`], function(v){
+        getAttrs(["apidaoum_selectbox", "apidaodois_selectbox", "apidaotres_selectbox", "selectedattribute","selectedrawvalue", "rawroll", "rawattribute", `${arr_skill[0]}_checkbox`,  `${arr_skill[0]}_proficiency`, "proficient_bonus", `${arr_skill[0]}_especialization`, `mod_${arr_skill[0]}`], function(v){
             
             let pericia_name = skills_name[arr_skill[0]];
 
@@ -1466,16 +1472,19 @@
             let roll_construction = "";                 
             
             if(arr_skill[1] == "simples"){
-                roll_construction = `1d20+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
+                roll_construction = `1d20 + @{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}`;
             }
             if(arr_skill[1] == "vantagem"){
-                roll_construction = `2d20kh1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
+                roll_construction = `2d20kh1 + @{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}`;
             }
             if(arr_skill[1] == "desvantagem"){
-                roll_construction = `2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization}&#41;&#41; + @{mod_${arr_skill[0]}}`;
+                roll_construction = `2d20kl1 + @{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} &#42; @{proficient_bonus} &#42; (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}`;
             }
 
-            startRoll(`&{template:skillroll}{{character=@{character_name}}} {{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}} {{rolagem=[[ ${roll_construction} ]]}} {{reroll=${roll_construction} }}`, diceroll => {});
+            let final_roll = `&{template:skillroll}{{character=@{character_name}}} {{pericia=${pericia_name}(${atribute_name[v.rawattribute]})}} {{rolagem=[[ ${roll_construction} ]]}} {{reroll=[ReRoll](~reroll)}}`;
+
+            startRoll(final_roll, diceroll => {
+            });
 
             ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].forEach(stat => {
                 $20(`.sheet-attr-span-${stat}`).removeClass("sheet-active-element");
@@ -1485,6 +1494,7 @@
             setAttrs({[`selectedattribute`]: "" });
             setAttrs({[`selectedrawvalue`]: "" });
             setAttrs({[`${arr_skill[0]}_checkbox`]: 0})
+            setAttrs({[`rawroll`]: final_roll});
 
         });
 
@@ -2141,7 +2151,7 @@
     
                 //Assamble Roll Templates
                 //if (v.dtype === "full") {
-                rollbase = `&{template:atkdmg} {{character_name=@{character_name}}}  {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[1d20cs>@{atkcritrange}${hbonus}]]}} ${r2}cs>@{atkcritrange}${hbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${hdmg1}]]}} {{dmg1type=${dmgtype}}} @{dmg2flag} {{dmg2=[[${hdmg2}]]}} {{dmg2type=${dmg2type}}} {{crit1=[[${crit1}[CRIT]]]}} {{crit2=[[${crit2}[CRIT]]]}} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} } {{globaldamage=${globaldamage}}} {{globaldamagecrit=${globaldamagecrit}}} ammo=@{ammo}`;
+                rollbase = `&{template:atkdmg} {{character_name=@{character_name}}}  {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[1d20cs>@{atkcritrange}${hbonus}]]}} ${r2}cs>@{atkcritrange}${hbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${hdmg1}]]}} {{dmg1type=${dmgtype}}} @{dmg2flag} {{dmg2=[[${hdmg2}]]}} {{dmg2type=${dmg2type}}} {{crit1=[[${crit1}[CRIT]]]}} {{crit2=[[${crit2}[CRIT]]]}} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} } {{globaldamage=${globaldamage}}} {{globaldamagecrit=${globaldamagecrit}}} ammo=@{ammo} {{reroll=[ReRoll](~repeating_attacks_reroll)}}`;
                 /*} else if (atkflag != 0) {
                     rollbase = `&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attacks_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attacks_attack_crit)}} {{r1=[[1d20cs>@{atkcritrange}${hbonus}]]}} ${r2}cs>@{atkcritrange}${hbonus}]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} } ammo=@{ammo} `;
                 } else if (dmgflag1 != 0) {
@@ -2154,13 +2164,13 @@
                 update[`${repeating_attacks}_rollbase_crit`] = `&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${hdmg1}]]}} {{dmg1type=${dmgtype}}} @{dmg2flag} {{dmg2=[[${hdmg2}]]}} {{dmg2type=${dmg2type}}} {{crit1=[[${crit1}]]}} {{crit2=[[${crit2}]]}} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=${globaldamage}}} {{globaldamagecrit=${globaldamagecrit}}} `;
                 update[`${repeating_attacks}_atkbonus`]      = bonus;
                 update[`${repeating_attacks}_rollbase`]      = rollbase;
-    
                
                 setAttrs(update, {silent: true}, () => {
                     callbacks.forEach((callback) => {
                         callback();
                     });
                 });
+                
             });
         });
     };
@@ -2175,18 +2185,18 @@
             <span>{{{tipoacao}}}</span> |
             <span>{{{nameaction}}}</span> |
             <span>{{custoacao}}</span>
-        </div>
-        {{#info_actions}}
-            <div class="sheet-actionspell-info">
-                <span class="sheet-span-info">Informações</span><span>{{info_actions}}</span>
-            </div>
-        {{/info_actions}}
+        </div>       
         {{#descritores_actions}}
             <div class="sheet-actionspell-descriptor">
                 <span  class="sheet-span-info">{{descritores_actions}}</span>
             </div>
         {{/descritores_actions}}
-        <div class="sheet-actionspell-white">
+        {{#info_actions}}
+            <div class="sheet-actionspell-info">
+                <span>{{info_actions}}</span>
+            </div>
+        {{/info_actions}}
+        <div class="sheet-actionspell-body">
             {{#alcance_actions}}
                 <span  class="sheet-span-info">Alcance:</span><span>{{alcance_actions}}</span><br>
             {{/alcance_actions}}
@@ -2201,41 +2211,67 @@
             {{/component_actions}}
         </div>
         {{#gatilho_actions}}
-            <div class="sheet-actionspell-black">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Gatilho:</span><span>{{gatilho_actions}}</span>
             </div>
         {{/gatilho_actions}}
         {{#ataque_actions}}
-            <div class="sheet-actionspell-white">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Ataque:</span><span>{{ataque_actions}}</span>
             </div>
         {{/ataque_actions}}
         {{#acerto_actions}}
-            <div class="sheet-actionspell-black">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Acerto:</span><span>{{acerto_actions}}</span>
             </div>
         {{/acerto_actions}}
         {{#erro_actions}}
-            <div class="sheet-actionspell-white">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Erro:</span><span>{{erro_actions}}</span>
             </div>
         {{/erro_actions}}
         {{#efeito_actions}}
-            <div class="sheet-actionspell-black">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Efeito:</span><span>{{efeito_actions}}</span>
             </div>
         {{/efeito_actions}}
         {{#especial_actions}}
-            <div class="sheet-actionspell-black">
+            <div class="sheet-actionspell-body">
                 <span class="sheet-span-info">Especial:</span><span>{{especial_actions}}</span>
             </div>
         {{/especial_actions}}
         {{#modificacoes}}
-        <div class="sheet-actionspell-white">
-            <span class="sheet-span-info-header">Modificações:</span><br>
-            <span class="sheet-span-info">Custo:</span><span>{{customod_actions}}</span><br>
-            <span class="sheet-span-info">Tipo:</span><span>{{tipomod_actions}}</span><br>
-            <span class="sheet-span-info">Descrição:</span><span>{{description_actions}}</span>
+        <div class="sheet-actionspell-body">
+            {{#rollGreater() modcheckone 0}}
+                <span>{{customod_actions}}</span> <span>{{tipomod_actions}}</span> <span>{{description_actions}}</span><br>
+            {{/rollGreater() modcheckone 0}}
+            {{#rollGreater() modchecktwo 0}}
+                <span>{{customodtwo}}</span> <span>{{tipomodtwo}}</span> <span>{{descriptiontwo}}</span><br>
+            {{/rollGreater() modchecktwo 0}}
+            {{#rollGreater() modcheckthree 0}}
+                <span>{{customodthree}}</span> <span>{{tipomodthree}}</span> <span>{{descriptionthree}}</span><br>
+            {{/rollGreater() modcheckthree 0}}
+            {{#rollGreater() modcheckfour 0}}
+                <span>{{customodfour}}</span> <span>{{tipomodfour}}</span> <span>{{descriptionfour}}</span><br>
+            {{/rollGreater() modcheckfour 0}}
+            {{#rollGreater() modcheckfive 0}}
+                <span>{{customodfive}}</span> <span>{{tipomodfive}}</span> <span>{{descriptionfive}}</span><br>
+            {{/rollGreater() modcheckfive 0}}
+            {{#rollGreater() modchecksix 0}}
+                <span>{{customodsix}}</span> <span>{{tipomodsix}}</span> <span>{{descriptionsix}}</span><br>
+            {{/rollGreater() modchecksix 0}}
+            {{#rollGreater() modcheckseven 0}}
+                <span>{{customodseven}}</span> <span>{{tipomodseven}}</span> <span>{{descriptionseven}}</span><br>
+            {{/rollGreater() modcheckseven 0}}
+            {{#rollGreater() modcheckeigth 0}}
+                <span>{{customodeigth}}</span> <span>{{tipomodeigth}}</span> <span>{{descriptioneigth}}</span><br>
+            {{/rollGreater() modcheckeigth 0}}
+            {{#rollGreater() modchecknine 0}}
+                <span>{{customodnine}}</span> <span>{{tipomodnine}}</span> <span>{{descriptionnine}}</span><br>
+            {{/rollGreater() modchecknine 0}}
+            {{#rollGreater() modcheckten 0}}
+                <span>{{customodten}}</span> <span>{{tipomodten}}</span> <span>{{descriptionten}}</span><br>
+            {{/rollGreater() modcheckten 0}}
         </div>
         {{/modificacoes}}
     </div>
@@ -2276,7 +2312,7 @@
             <span>
                 {{globaldamage}}
                 {{#attack}}                    
-                    {{#rollWasCrit() r1}}<span class="plus"> + </span>{{globaldamagecrit}}{{/rollWasCrit() r1}}
+                    {{#rollGreater() r1}}<span class="plus"> + </span>{{globaldamagecrit}}{{/rollGreater() r1}}
                 {{/attack}}
             </span>
             <span class="sublabel">{{globaldamagetype}}</span>
@@ -2293,7 +2329,7 @@
                             <span class="damage">
                                 {{dmg1}}
                                 {{#attack}}
-                                    {{#rollWasCrit() r1}}+ {{crit1}}{{/rollWasCrit() r1}}                                    
+                                    {{#rollGreater() r1}}+ {{crit1}}{{/rollGreater() r1}}                                    
                                 {{/attack}}
                             </span>
                             <span class="sublabel">{{dmg1type}}</span>
@@ -2307,7 +2343,7 @@
                             <span class="damage">
                                 {{dmg2}}
                                 {{#attack}}
-                                    {{#rollWasCrit() r1}}+ {{crit2}}{{/rollWasCrit() r1}}                                    
+                                    {{#rollGreater() r1}}+ {{crit2}}{{/rollGreater() r1}}                                    
                                 {{/attack}}
                             </span>
                             <span class="sublabel">{{dmg2type}}</span>
@@ -2320,7 +2356,7 @@
                             <span class="damage">
                                 {{dmg1}}
                                 {{#attack}}                                    
-                                    {{#rollWasCrit() r1}}+ {{crit1}}{{/rollWasCrit() r1}}                                    
+                                    {{#rollGreater() r1}}+ {{crit1}}{{/rollGreater() r1}}                                    
                                 {{/attack}}
                             </span>
                             <span class="sublabel">{{dmg1type}}</span>
@@ -2330,7 +2366,7 @@
                             <span>
                                 {{dmg2}}
                                 {{#attack}}
-                                    {{#rollWasCrit() r1}}+ {{crit2}}{{/rollWasCrit() r1}}                                    
+                                    {{#rollGreater() r1}}+ {{crit2}}{{/rollGreater() r1}}                                    
                                 {{/attack}}
                             </span>
                             <span class="sublabel">{{dmg2type}}</span>
@@ -2341,6 +2377,12 @@
             
         </div>
     {{/damage}}
+    
+    {{#reroll}}
+        <div class="sheet-skillreroll">
+            <span>{{reroll}}</span>
+        </div>
+    {{/reroll}}
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-skillroll">
@@ -2355,7 +2397,7 @@
             <span class="sheet-span-info">Rolagem</span><span>{{rolagem}}</span>
         </div>
         <div class="sheet-skillreroll">
-            <span>[ReRoll](`/r {{reroll}})</span>
+            <span>{{reroll}}</span>
         </div>
     </div>
 </rolltemplate>
